@@ -17,12 +17,15 @@ services:
     build: .
     environment:
       - NODE_ENV=production
+    expose:
+      - 3000
     depends_on:
       - db
     labels:
       - traefik.enable=true
       - traefik.http.routers.http-next.entrypoints=web
       - traefik.http.routers.http-next.tls=false
+      - traefik.http.routers.http-next.rule=Host(`67.205.159.60`)
       - traefik.http.routers.http-next.service=http-next
       - traefik.http.services.http-next.loadbalancer.server.port=3000
 
