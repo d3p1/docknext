@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/d3p1/docknext/compare/v1.2.0...v1.3.0) (2025-02-12)
+
+
+### Features
+
+* improve docker compose file for Traefik example app [[#1](https://github.com/d3p1/docknext/issues/1)] ([0f1cf3a](https://github.com/d3p1/docknext/commit/0f1cf3a20eb2587403d249618296508039d5ab50))
+
 # [1.2.0](https://github.com/d3p1/docknext/compare/v1.1.1...v1.2.0) (2025-02-12)
 
 
