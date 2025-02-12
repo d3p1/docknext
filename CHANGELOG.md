@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/d3p1/docknext/compare/v1.1.1...v1.2.0) (2025-02-12)
+
+
+### Features
+
+* add Traefik example app to test development [[#1](https://github.com/d3p1/docknext/issues/1)] ([a806f26](https://github.com/d3p1/docknext/commit/a806f26ff9b37527efb9c94c95c4aa2457b89a72))
+
 ## [1.1.1](https://github.com/d3p1/docknext/compare/v1.1.0...v1.1.1) (2025-02-12)
 
 
