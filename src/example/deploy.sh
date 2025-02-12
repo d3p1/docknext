@@ -6,7 +6,6 @@ POSTGRES_PASSWORD=$(openssl rand -base64 12)  # Generate a random 12-character p
 POSTGRES_DB="mydatabase"
 SECRET_KEY="my-secret" # for the demo app
 NEXT_PUBLIC_SAFE_KEY="safe-key" # for the demo app
-DOMAIN_NAME="nextselfhost.dev" # replace with your own
 
 # Script Vars
 APP_DIR=~/docknext/src/example
@@ -88,7 +87,6 @@ limit_req_zone \$binary_remote_addr zone=mylimit:10m rate=10r/s;
 
 server {
     listen 80;
-    server_name $DOMAIN_NAME;
 
     location / {
         proxy_pass http://localhost:3000;
