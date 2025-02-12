@@ -1,0 +1,34 @@
+{
+    "name": "@d3p1/docknext",
+    "version": "0.0.0",
+    "description": "A Docker environment generator for Next.js",
+    "author": "C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)",
+    "homepage": "https://github.com/d3p1/docknext#readme",
+    "bugs": {
+        "url": "https://github.com/d3p1/docknext/issues"
+    },
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/d3p1/docknext.git"
+    },
+    "keywords": [
+        "docker",
+        "docker-compose",
+        "react",
+        "nextjs",
+        "docker-nextjs"
+    ],
+    "license": "MIT",
+    "devDependencies": {
+        "@commitlint/cli": "^19.4.0",
+        "@d3p1/commitlint-config": "^1.0.1",
+        "husky": "^9.1.4",
+        "prettier": "3.3.3"
+    },
+    "scripts": {
+        "prepare": "husky",
+        "format:code": "prettier --ignore-path .gitignore --check src",
+        "format:code:fix": "npm run format:code -- --write"
+    }
+}
