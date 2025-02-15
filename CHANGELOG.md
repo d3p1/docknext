@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/d3p1/docknext/compare/v1.3.0...v1.4.0) (2025-02-15)
+
+
+### Features
+
+* init CLI [[#1](https://github.com/d3p1/docknext/issues/1)] ([eafdd97](https://github.com/d3p1/docknext/commit/eafdd97592ca0deaf560e81f2bedb171f4ff9f14))
+
 # [1.3.0](https://github.com/d3p1/docknext/compare/v1.2.0...v1.3.0) (2025-02-12)
 
 
