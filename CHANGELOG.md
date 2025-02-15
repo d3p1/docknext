@@ -1,3 +1,17 @@
+# [1.5.0](https://github.com/d3p1/docknext/compare/v1.4.0...v1.5.0) (2025-02-15)
+
+
+### Bug Fixes
+
+* adjust JetBrains IDE configuration deployment script [[#6](https://github.com/d3p1/docknext/issues/6)] ([94be853](https://github.com/d3p1/docknext/commit/94be853367e2211d40e6a5b4308ab79b5a533b12))
+
+
+### Features
+
+* add JetBrains IDE configuration [[#6](https://github.com/d3p1/docknext/issues/6)] ([dd14905](https://github.com/d3p1/docknext/commit/dd14905e90c31d22cc1f7c023fadacee9942d439))
+* improve Docker Composer and Traefik configuration [[#1](https://github.com/d3p1/docknext/issues/1)] ([497c554](https://github.com/d3p1/docknext/commit/497c554a452bbdc90abf575c2a9ee2713af0e840))
+* improve environment files [[#1](https://github.com/d3p1/docknext/issues/1)] ([19b7be4](https://github.com/d3p1/docknext/commit/19b7be4a9d8c6585f9ee3b98a949e5ac9ae006c5))
+
 # [1.4.0](https://github.com/d3p1/docknext/compare/v1.3.0...v1.4.0) (2025-02-15)
 
 
