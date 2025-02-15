@@ -9,6 +9,10 @@
 #               up -d`
 # @note        Add Traefik configuration to be able to generate platform 
 #              certificates using Let's Encrypt
+# @note        The `web` service requires a `package.json` in its root
+#              that has the `next build` and `next start` commands
+#              as the `build` and `start` scripts, respectively.
+#              (it runs `npm run build && npm run start` as `command`)
 ##
 services:
   traefik:
@@ -24,3 +28,5 @@ services:
       - NODE_ENV=production
     labels:
       - traefik.http.routers.https-next.tls.certresolver=le-http
+    command:
+      - npm run build && npm run start

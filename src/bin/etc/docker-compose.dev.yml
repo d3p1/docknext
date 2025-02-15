@@ -9,6 +9,9 @@
 #               up -d`
 # @note        Add file provider configuration to Traefik to be able to
 #              use locally generated SSL certificates
+# @note        The `web` service requires a `package.json` in its root
+#              that has the `next dev` command as the `dev` script
+#              (it runs `npm run dev` as `command`)
 # @note        Mount host folder with developed code into containers
 ##
 services:
@@ -23,6 +26,8 @@ services:
       - ${BASE_DOC_ROOT_DIR}:/app
     environment:
       - NODE_ENV=development
+    command:
+      - npm run dev
 
   cli:
     volumes:
