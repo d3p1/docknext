@@ -1,0 +1,70 @@
+##
+# @description Services
+# @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+# @note        This is a base Docker Compose file that will be extended 
+#              by other files related to the environment 
+#              (i.e., a Docker Compose file for the dev or prod environment)
+# @note        It is added a `cli` profile to create the related service/s
+#              on demand (so they are not created when `docker compose up`
+#              is executed). In this way, the user can manage
+#              when it is required to execute them
+# @note        The `web` service requires a `package.json` in its root
+#              that has the `next start` command as the `start` script
+#              (it runs `npm run start` as `command`)
+# @link        https://docs.docker.com/compose/profiles/
+##
+services:
+  traefik:
+    image:
+      traefik:v2.10
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - web
+    volumes:
+      - ${BASE_DOCKER_PATH}:/var/run/docker.sock
+    environment:
+      - TRAEFIK_ENTRYPOINTS_WEB_ADDRESS=:80
+      - TRAEFIK_ENTRYPOINTS_WEBSECURE_ADDRESS=:443
+      - TRAEFIK_PING=true
+      - TRAEFIK_PROVIDERS_DOCKER=true
+    restart:
+      always
+
+  web:
+    image:
+      node:${BASE_NODE_VERSION}-alpine
+    expose:
+      - 3000
+    volumes:
+      - docroot:/app
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.https-next.entrypoints=websecure
+      - traefik.http.routers.https-next.tls=true
+      - traefik.http.routers.https-next.rule=Host(`${BASE_DOMAIN}`) || Host(`www.${BASE_DOMAIN}`)
+      - traefik.http.routers.https-next.service=https-next
+      - traefik.http.services.https-next.loadbalancer.server.port=3000
+      - traefik.http.routers.http-next.entrypoints=web
+      - traefik.http.routers.http-next.tls=false
+      - traefik.http.routers.http-next.rule=Host(`${BASE_DOMAIN}`) || Host(`www.${BASE_DOMAIN}`)
+      - traefik.http.routers.http-next.service=http-next
+      - traefik.http.services.http-next.loadbalancer.server.port=3000
+    command:
+      - npm run start
+    restart:
+      always
+
+  cli:
+    image:
+      node:${BASE_NODE_VERSION}
+    volumes:
+      - docroot:/app
+    labels:
+      - traefik.enable=false
+    profiles:
+      - cli
+
+volumes:
+  docroot:

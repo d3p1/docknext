@@ -1,0 +1,10 @@
+##
+# @description Profile file to setup environment variables that will be used
+#              by `docknext` to initialize/setup the Docker environment
+# @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+##
+export SCRIPT_MODE="production"
+export SCRIPT_USER_EMAIL=""
+export SCRIPT_DOMAIN=""
+export SCRIPT_NODE_VERSION="8.2"
+export SCRIPT_COMPOSE_PROFILES=""

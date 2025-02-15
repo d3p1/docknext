@@ -1,0 +1,29 @@
+##
+# @description Profile file to setup environment variables that will be used
+#              by `docknext` to initialize/setup the Docker environment
+# @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+# @note        If you would like to run the CLI for a production environment,
+#              use `production` value for `SCRIPT_MODE`.
+#              If you would like to run the CLI for a development environment,
+#              use `development` value for `SCRIPT_MODE`
+# @note        The `SCRIPT_DOC_ROOT_DIR` must point to the local
+#              app source code.
+#              It is required for development environments to
+#              work with the platform code locally, and also
+#              for production environments so the `docknext next-setup`
+#              knows the location of the platform code that should be
+#              copy to the service/container
+# @note        The `SCRIPT_IDE_KEY` must be set to one of the
+#              following values: `phpstorm`, `vscode`, or an empty string ("").
+#              If set to `phpstorm` or `vscode`, configuration files related to
+#              the corresponding IDE will be deployed inside
+#              `SCRIPT_DOC_ROOT_DIR` to facilitate the initialization
+#              of the working environment
+##
+export SCRIPT_MODE=""
+export SCRIPT_USER_EMAIL=""
+export SCRIPT_DOMAIN=""
+export SCRIPT_NODE_VERSION="18"
+export SCRIPT_DOC_ROOT_DIR="./www"
+export SCRIPT_IDE_KEY=""
+export SCRIPT_COMPOSE_PROFILES=""
