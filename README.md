@@ -14,7 +14,7 @@ A [Docker](https://www.docker.com/) environment generator for [Next.js](https://
 The main idea behind this tool is to have an automatic way to generate [Next.js](https://nextjs.org/) environments for development, but also for production. To support this, [Traefik](https://doc.traefik.io/traefik/) has been included to the tech stack, enabling SSL termination and simplifying the generation of SSL certificates for live sites.
 
 > [!NOTE]
-> The idea is to continue improving the tech stack with already configured SMTP, database and other relevant services to facilitate the release of complex apps/developments.
+> It will continue improving to add other relevant services to the tech stack like SMTP, database, etc. They will be ready to use to facilitate the release of complex apps/developments.
 
 It is worth mentioning that this tool was inspired by the following excellent project that achieves similar goals:
 
