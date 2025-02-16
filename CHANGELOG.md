@@ -1,3 +1,11 @@
+# [1.7.0](https://github.com/d3p1/docknext/compare/v1.6.0...v1.7.0) (2025-02-16)
+
+
+### Features
+
+* improve Next.js installation script [[#1](https://github.com/d3p1/docknext/issues/1)] ([11b279a](https://github.com/d3p1/docknext/commit/11b279a4f927179e902f11b683337202ad79da9a))
+* improve Next.js setup script [[#1](https://github.com/d3p1/docknext/issues/1)] ([340527b](https://github.com/d3p1/docknext/commit/340527be5cca5beedb2997bc334fb170ffad3c49))
+
 # [1.6.0](https://github.com/d3p1/docknext/compare/v1.5.0...v1.6.0) (2025-02-16)
 
 
