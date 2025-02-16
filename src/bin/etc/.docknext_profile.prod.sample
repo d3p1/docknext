@@ -6,5 +6,5 @@
 export SCRIPT_MODE="production"
 export SCRIPT_USER_EMAIL=""
 export SCRIPT_DOMAIN=""
-export SCRIPT_NODE_VERSION="18"
+export SCRIPT_NODE_VERSION="22"
 export SCRIPT_COMPOSE_PROFILES=""
