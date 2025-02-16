@@ -15,6 +15,8 @@ source $BASE_DIR/lib/utils/execute-command-script.sh
 # Main
 #
 # @return void
+# @todo   Add `standalone` configuration in project Next.js configuration
+# @todo   Implement Next.js image with an script that executes this logic
 ##
 main() {
     ##
@@ -23,17 +25,6 @@ main() {
     #       conditions needed for a Next.js setup
     ##
     _execute_setup_script "setup-services"
-
-    ##
-    # @note The `cli` service uses the project CLI image.
-    #       This image has an `init` script that receives as first param
-    #       a flag to determine if it is required to execute an installation.
-    #       If it is set to `true`, then a Next.js platform installation is
-    #       executed. If it is set to `false`, then a Next.js setup is executed
-    # @link https://hub.docker.com/r/d3p1/magento-php
-    # @todo Implement Next.js image that install platform or setup platform (remember add `standalone` configuration in `package.json`)
-    ##
-    docker compose run --rm cli init 0
 }
 
 ##
