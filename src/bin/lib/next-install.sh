@@ -26,17 +26,15 @@ main() {
 ##
 _install_next_platform() {
     ##
-    # @note The `cli` service uses the project CLI image.
-    #       This image has an `init` script that receives as first param
-    #       a flag to determine if it is required to execute an installation.
-    #       If it is set to `true`, then a Next.js platform installation is
-    #       executed. If it is set to `false`, then a Next.js setup is executed
-    # @link https://hub.docker.com/r/d3p1/magento-php
-    # @todo Implement Next.js image that install platform or setup platform (remember add `standalone` configuration in `package.json`)
+    # @todo For now, it is used a sequence of command to perform installation.
+    #       However, it would be better to create an image that already
+    #       has an script that execute these steps (and sets permissions
+    #       correctly for the `node` user in the `/app` working directory)
     ##
-    print_message "Start Next installation" "notice"
-    docker compose run --rm cli init 1
-    print_message "End Next installation" "notice"
+    print_message "Start Next.js installation" "notice"
+    docker compose run --rm --user=root cli npx create-next-app@latest ./ --example https://github.com/d3p1/docknext/tree/main/src/bin/etc/services/next/templates/vanilla
+    docker compose run --rm --user=root cli chown -R node:node /app
+    print_message "End Next.js installation" "notice"
 }
 
 ##
