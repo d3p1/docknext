@@ -1,3 +1,16 @@
+# [1.6.0](https://github.com/d3p1/docknext/compare/v1.5.0...v1.6.0) (2025-02-16)
+
+
+### Bug Fixes
+
+* adjust Docker Compose configuration for production environments [[#1](https://github.com/d3p1/docknext/issues/1)] ([21dfb7e](https://github.com/d3p1/docknext/commit/21dfb7ec01851130e8866a0766027f9fe4ecde92))
+* remove unneeded examples [[#1](https://github.com/d3p1/docknext/issues/1)] ([4b451ec](https://github.com/d3p1/docknext/commit/4b451ec03ce7a490c246b72f7e7eed0966c9bd7c))
+
+
+### Features
+
+* add Next.js vanilla template [[#1](https://github.com/d3p1/docknext/issues/1)] ([6658ba7](https://github.com/d3p1/docknext/commit/6658ba72102f4814d8803d5c7fc697d1571a49a4))
+
 # [1.5.0](https://github.com/d3p1/docknext/compare/v1.4.0...v1.5.0) (2025-02-15)
 
 
