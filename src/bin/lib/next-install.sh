@@ -32,7 +32,7 @@ _install_next_platform() {
     #       correctly for the `node` user in the `/app` working directory)
     ##
     print_message "Start Next.js installation" "notice"
-    docker compose run --rm --user=root cli npx create-next-app@latest ./ --example https://github.com/d3p1/docknext/tree/main/src/bin/etc/services/next/templates/vanilla
+    docker compose run --rm --user=root cli npx create-next-app@latest ./ --example https://github.com/d3p1/docknext/tree/main/src/next/templates/vanilla
     docker compose run --rm --user=root cli chown -R node:node /app
     print_message "End Next.js installation" "notice"
 }
