@@ -34,6 +34,7 @@ _generate_infra_files() {
     cp "$BASE_DIR/etc/docker-compose.dev.yml" docker-compose.dev.yml
     cp "$BASE_DIR/etc/docker-compose.prod.yml" docker-compose.prod.yml
     cp "$BASE_DIR/etc/.env" .env
+    cp -R "$BASE_DIR/etc/services" ./services
     print_message "End copy infra files" "notice"
     
     ##
