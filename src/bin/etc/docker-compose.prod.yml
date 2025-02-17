@@ -31,4 +31,4 @@ services:
     labels:
       - traefik.http.routers.https-next.tls.certresolver=le-http
     command:
-      - npm run start
+      npm run start
