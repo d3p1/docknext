@@ -51,12 +51,12 @@ Using this tool is straightforward:
 
 2. Execute `docknext init` to generate the necessary [Docker Compose](https://docs.docker.com/compose/) files for the project.
 
-3. Execute `docknext next-install` if you want to install a new Next.js platform to work with the current generated environment. Or execute `docknext next-setup` if you want to configure an existing Next.js project to work with the current environment.
+3. Execute `docknext next-install` if you want to install a new Next.js platform to work with the current generated environment. Or execute `docknext next-configure` if you want to configure an existing Next.js project to work with the current environment.
 
-4. Execute `docknext ide-setup` to simplify the configuration of your IDE, allowing you to work with this generated environment efficiently and effectively.
+4. Execute `docknext ide-configure` to simplify the configuration of your IDE, allowing you to work with this generated environment efficiently and effectively.
 
 > [!IMPORTANT]
-> For now, `docknext ide-setup` only installs [startup scripts](https://www.jetbrains.com/help/webstorm/settings-tools-startup-tasks.html) that are very useful for [WebStorm](https://www.jetbrains.com/webstorm/). However, automating the configuration of other important aspects and supporting additional IDEs is still pending. [This ticket](https://github.com/d3p1/docknext/issues/6) will handle the completion of this requirement.
+> For now, `docknext ide-configure` only installs [startup scripts](https://www.jetbrains.com/help/webstorm/settings-tools-startup-tasks.html) that are very useful for [WebStorm](https://www.jetbrains.com/webstorm/). However, automating the configuration of other important aspects and supporting additional IDEs is still pending. [This ticket](https://github.com/d3p1/docknext/issues/6) will handle the completion of this requirement.
 
 > [!NOTE]
 > To gain a deeper understanding of how this tool works under the hood, visit the [wiki page](https://github.com/d3p1/docknext/wiki) (currently, [_in progress_](https://github.com/d3p1/docknext/issues/4)).

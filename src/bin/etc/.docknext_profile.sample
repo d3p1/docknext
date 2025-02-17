@@ -1,6 +1,6 @@
 ##
-# @description Profile file to setup environment variables that will be used
-#              by `docknext` to initialize/setup the Docker environment
+# @description Profile file to set up environment variables that will be used
+#              by `docknext` to initialize/set up the Docker environment
 # @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
 # @note        If you would like to run the CLI for a production environment,
 #              use `production` value for `SCRIPT_MODE`.
@@ -10,7 +10,7 @@
 #              app source code.
 #              It is required for development environments to
 #              work with the platform code locally, and also
-#              for production environments so the `docknext next-setup`
+#              for production environments so the `docknext next-configure`
 #              knows the location of the platform code that should be
 #              copy to the service/container
 # @note        The `SCRIPT_IDE_KEY` must be set to one of the

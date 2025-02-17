@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##
-# @description Docknext command to setup a Next.js platform
+# @description Docknext command to configure a Next.js platform
 # @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
 ##
 
@@ -20,21 +20,21 @@ source $BASE_DIR/lib/utils/execute-command-script.sh
 ##
 main() {
     ##
-    # @note Before executing the script that setup a Next.js platform,
+    # @note Before executing the script that configures a Next.js platform,
     #       it is required to prepare the environment services to meet
-    #       conditions needed for a Next.js setup
+    #       conditions needed for a Next.js configuration
     ##
-    _execute_setup_script "setup-services"
+    _execute_configure_script "configure-services"
 }
 
 ##
-# Execute setup script
+# Execute configuration script
 #
 # @param  string $1 Script name
 # @return void
 ##
-_execute_setup_script() {
-    execute_command_script "$BASE_DIR/lib/next-setup" "$1" "$SCRIPT_MODE"
+_execute_configure_script() {
+    execute_command_script "$BASE_DIR/lib/next-configure" "$1" "$SCRIPT_MODE"
 }
 
 ##

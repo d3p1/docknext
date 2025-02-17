@@ -1,18 +1,18 @@
 #!/bin/bash
 
 ##
-# @description Docknext command to setup an IDE to work with
+# @description Docknext command to configure an IDE to work with
 #              this Next.js environment
 # @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
 # @note        It was considered whether the logic of this command could be
 #              integrated into one of the existing commands (e.g.,
 #              `docknext init`, `docknext next-install`, or
-#              `docknext next-setup`), but the best approach was to make it
+#              `docknext next-configure`), but the best approach was to make it
 #              an independent command.
 #              Setting up the IDE is necessary for both
 #              new Next.js installations (`docknext next-install`)
 #              as well as for
-#              already existing installations (`docknext next-setup`),
+#              already existing installations (`docknext next-configure`),
 #              but the platform's source code must already be present to apply
 #              the required IDE configurations.
 #              Additionally, it's understood that this command will primarily

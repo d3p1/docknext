@@ -1,7 +1,8 @@
 #!/bin/bash
 
 ##
-# @description Setup production services required by `docknext next-setup`
+# @description Configure production services
+#              required by `docknext next-configure`
 # @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
 ##
 
@@ -16,11 +17,11 @@ source $BASE_DIR/lib/utils/log.sh
 # @return void
 ##
 main() {
-    _setup_next
+    _configure_next
 }
 
 ##
-# Setup Next.js
+# Configure Next.js
 #
 # @return void
 # @note   In a production environment, the platform source
@@ -29,10 +30,10 @@ main() {
 #         from host to the service/container
 # @link   https://stackoverflow.com/questions/32566624/docker-cp-all-files-from-a-folder-to-existing-container-folder
 ##
-_setup_next() {
-    print_message "Start Next.js setup for prod environment" "notice"
+_configure_next() {
+    print_message "Start Next.js configuration for prod environment" "notice"
     docker compose cp "${BASE_DOC_ROOT_DIR}/." web:/app
-    print_message "End Next.js setup for prod environment" "notice"
+    print_message "End Next.js configuration for prod environment" "notice"
 }
 
 ##
