@@ -39,7 +39,7 @@ To install this tool, run the following command:
 git clone https://github.com/d3p1/docknext.git && \
 chmod +x docknext/src/bin/setup/installer.sh   && \
 ./docknext/src/bin/setup/installer.sh          && \
-source ~/.bash_profile                          && \
+source ~/.bash_profile                         && \
 rm -rf docknext/
 ```
 
