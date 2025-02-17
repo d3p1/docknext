@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/d3p1/docknext/compare/v1.7.0...v1.7.1) (2025-02-17)
+
+
+### Bug Fixes
+
+* copy service files in init script [[#1](https://github.com/d3p1/docknext/issues/1)] ([c8f068b](https://github.com/d3p1/docknext/commit/c8f068b7660b6af93ef218ec3e885388965ea538))
+
 # [1.7.0](https://github.com/d3p1/docknext/compare/v1.6.0...v1.7.0) (2025-02-16)
 
 
