@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/d3p1/docknext/compare/v1.7.1...v1.7.2) (2025-02-17)
+
+
+### Bug Fixes
+
+* adjust Docker Compose entrypoint commands [[#1](https://github.com/d3p1/docknext/issues/1)] ([55d60d2](https://github.com/d3p1/docknext/commit/55d60d28305928bde01461bf6b90fd15420adffe))
+
 ## [1.7.1](https://github.com/d3p1/docknext/compare/v1.7.0...v1.7.1) (2025-02-17)
 
 
