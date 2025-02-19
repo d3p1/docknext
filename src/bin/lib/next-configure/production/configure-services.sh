@@ -28,6 +28,8 @@ main() {
 #         is not mounted to the service/container.
 #         Because of that, it is required to copy it
 #         from host to the service/container
+# @note   To copy files to a container, is necessary to start it first
+#         (`docker compose up -d web`)
 # @note   It is installed required dependencies and the build step,
 #         so when the environment is started (`docker compose up -d`)
 #         the platform works as expected
@@ -36,6 +38,7 @@ main() {
 ##
 _configure_next() {
     print_message "Start Next.js configuration for prod environment" "notice"
+    docker compose up -d web
     docker compose cp "${BASE_DOC_ROOT_DIR}/." web:/app
     docker compose run --rm cli npm install
     docker compose run --rm cli npm run build
