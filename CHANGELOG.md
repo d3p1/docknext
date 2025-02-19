@@ -1,3 +1,10 @@
+## [1.7.6](https://github.com/d3p1/docknext/compare/v1.7.5...v1.7.6) (2025-02-19)
+
+
+### Bug Fixes
+
+* adjust copy source code to production container command [[#1](https://github.com/d3p1/docknext/issues/1)] ([7c067bc](https://github.com/d3p1/docknext/commit/7c067bc7fef504cd173f680f102cf9abb4c2a5d0))
+
 ## [1.7.5](https://github.com/d3p1/docknext/compare/v1.7.4...v1.7.5) (2025-02-19)
 
 
