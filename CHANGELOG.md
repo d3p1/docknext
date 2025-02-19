@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/d3p1/docknext/compare/v1.7.2...v1.7.3) (2025-02-19)
+
+
+### Bug Fixes
+
+* adjust installer to avoid multiple definitions of command in PATH [[#1](https://github.com/d3p1/docknext/issues/1)] ([06a994e](https://github.com/d3p1/docknext/commit/06a994ebd7a468647fe293d36837ea0e7e9be66c))
+
 ## [1.7.2](https://github.com/d3p1/docknext/compare/v1.7.1...v1.7.2) (2025-02-17)
 
 
