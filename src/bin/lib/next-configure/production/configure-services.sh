@@ -37,11 +37,18 @@ main() {
 # @link   https://stackoverflow.com/questions/32566624/docker-cp-all-files-from-a-folder-to-existing-container-folder
 ##
 _configure_next() {
+    ##
+    # @todo For now, it is used a sequence of command to perform installation.
+    #       However, it would be better to create an image that already
+    #       has an script that execute these steps (and sets permissions
+    #       correctly for the `node` user in the `/app` working directory)
+    ##
     print_message "Start Next.js configuration for prod environment" "notice"
     docker compose up -d web
     docker compose cp "$SCRIPT_DOC_ROOT_DIR/." web:/app
-    docker compose run --rm cli npm install
-    docker compose run --rm cli npm run build
+    docker compose run --rm --user=root cli npm install
+    docker compose run --rm --user=root cli npm run build
+    docker compose run --rm --user=root cli chown -R node:node /app
     print_message "End Next.js configuration for prod environment" "notice"
 }
 
