@@ -1,3 +1,11 @@
+## [1.7.4](https://github.com/d3p1/docknext/compare/v1.7.3...v1.7.4) (2025-02-19)
+
+
+### Bug Fixes
+
+* add dependencies and build to platform configuration script for production environments [[#1](https://github.com/d3p1/docknext/issues/1)] ([6550d45](https://github.com/d3p1/docknext/commit/6550d45a4e834b7488c85184f6f9c55c045fa363))
+* improve docknext configuration file for production environments [[#1](https://github.com/d3p1/docknext/issues/1)] ([737e120](https://github.com/d3p1/docknext/commit/737e120b66f9530a40da14b702a219409ac5cc59))
+
 ## [1.7.3](https://github.com/d3p1/docknext/compare/v1.7.2...v1.7.3) (2025-02-19)
 
 
