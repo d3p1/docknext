@@ -1,3 +1,10 @@
+## [1.7.7](https://github.com/d3p1/docknext/compare/v1.7.6...v1.7.7) (2025-02-19)
+
+
+### Bug Fixes
+
+* solve permission issues on production platform configuration script [[#1](https://github.com/d3p1/docknext/issues/1)] ([8b6f761](https://github.com/d3p1/docknext/commit/8b6f761ae07d59014bd4865c047bc9c0c4605f46))
+
 ## [1.7.6](https://github.com/d3p1/docknext/compare/v1.7.5...v1.7.6) (2025-02-19)
 
 
