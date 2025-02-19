@@ -39,7 +39,7 @@ main() {
 _configure_next() {
     print_message "Start Next.js configuration for prod environment" "notice"
     docker compose up -d web
-    docker compose cp "${BASE_DOC_ROOT_DIR}/." web:/app
+    docker compose cp "$SCRIPT_DOC_ROOT_DIR/." web:/app
     docker compose run --rm cli npm install
     docker compose run --rm cli npm run build
     print_message "End Next.js configuration for prod environment" "notice"
