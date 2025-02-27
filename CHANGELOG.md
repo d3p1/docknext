@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/d3p1/docknext/compare/v1.7.7...v1.8.0) (2025-02-27)
+
+
+### Features
+
+* add Traefik redirection from http to https [[#1](https://github.com/d3p1/docknext/issues/1)] ([12d8096](https://github.com/d3p1/docknext/commit/12d8096570a3282d6b5cca754f552adf990a9a3c))
+
 ## [1.7.7](https://github.com/d3p1/docknext/compare/v1.7.6...v1.7.7) (2025-02-19)
 
 
