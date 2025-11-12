@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/d3p1/docknext/compare/v1.8.0...v1.8.1) (2025-11-12)
+
+
+### Bug Fixes
+
+* adjust standalone production server command [[#1](https://github.com/d3p1/docknext/issues/1)] ([5fc6b06](https://github.com/d3p1/docknext/commit/5fc6b06bfe97ec43e4314bef4b1acd92f43f0606))
+
 # [1.8.0](https://github.com/d3p1/docknext/compare/v1.7.7...v1.8.0) (2025-02-27)
 
 
