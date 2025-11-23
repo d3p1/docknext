@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/d3p1/docknext/compare/v1.9.0...v1.9.1) (2025-11-23)
+
+
+### Bug Fixes
+
+* define current directory when installing next without template [[#1](https://github.com/d3p1/docknext/issues/1)] ([3c78758](https://github.com/d3p1/docknext/commit/3c78758df92ec6e3ba4ed96ef01038207b56c108))
+
 # [1.9.0](https://github.com/d3p1/docknext/compare/v1.8.1...v1.9.0) (2025-11-23)
 
 
