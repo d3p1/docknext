@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/d3p1/docknext/compare/v1.8.1...v1.9.0) (2025-11-23)
+
+
+### Features
+
+* add next template as config value [[#1](https://github.com/d3p1/docknext/issues/1)] ([6d4e5c0](https://github.com/d3p1/docknext/commit/6d4e5c0f4f64b0c3661b3ba59140f4b3ea9b0d55))
+
 ## [1.8.1](https://github.com/d3p1/docknext/compare/v1.8.0...v1.8.1) (2025-11-12)
 
 
