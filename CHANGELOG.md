@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/d3p1/docknext/compare/v1.9.1...v1.10.0) (2025-12-23)
+
+
+### Features
+
+* add flag to define the use of the src directory when the app is installed [[#1](https://github.com/d3p1/docknext/issues/1)] ([7e0929b](https://github.com/d3p1/docknext/commit/7e0929b132586518d7dedbdde659916d0a8bb34f))
+
 ## [1.9.1](https://github.com/d3p1/docknext/compare/v1.9.0...v1.9.1) (2025-11-23)
 
 
