@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/d3p1/docknext/compare/v1.10.0...v1.10.1) (2025-12-23)
+
+
+### Bug Fixes
+
+* adjust command that allows the use of the src directory when the app is installed [[#1](https://github.com/d3p1/docknext/issues/1)] ([ce7b872](https://github.com/d3p1/docknext/commit/ce7b872ed47e6fc36757489895b655aab7992979))
+
 # [1.10.0](https://github.com/d3p1/docknext/compare/v1.9.1...v1.10.0) (2025-12-23)
 
 
