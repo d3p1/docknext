@@ -30,12 +30,22 @@ _install_next_platform() {
     #       However, it would be better to create an image that already
     #       has an script that execute these steps (and sets permissions
     #       correctly for the `node` user in the `/app` working directory)
+    # @todo Perhaps, instead of having multiple variables for init options,
+    #       we could create only one variable that defines all of them.
+    #       Then, we use it inside the `npx create-next-app@latest` command
     ##
     print_message "Start Next.js installation" "notice"
+
     if [ -n "$SCRIPT_NEXT_TEMPLATE" ]; then
         docker compose run --rm --user=root cli npx create-next-app@latest ./ --example "$SCRIPT_NEXT_TEMPLATE"
     else
-        docker compose run --rm --user=root cli npx create-next-app@latest ./ --yes
+        local OPTIONS=""
+        if [ "$SCRIPT_NEXT_USE_SRC_DIR" != "0" ]; then
+            OPTIONS+="--src-dir"
+        fi
+        OPTIONS+=" --yes"
+
+        docker compose run --rm --user=root cli npx create-next-app@latest ./ "$OPTIONS"
     fi
     docker compose run --rm --user=root cli chown -R node:node /app
     print_message "End Next.js installation" "notice"
