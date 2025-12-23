@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/d3p1/docknext/compare/v1.10.1...v1.10.2) (2025-12-23)
+
+
+### Bug Fixes
+
+* adjust command argument expansion logic for the install script [[#1](https://github.com/d3p1/docknext/issues/1)] ([fce8aa3](https://github.com/d3p1/docknext/commit/fce8aa3d1a3f77817644d09d150319cca4167448))
+
 ## [1.10.1](https://github.com/d3p1/docknext/compare/v1.10.0...v1.10.1) (2025-12-23)
 
 
