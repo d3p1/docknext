@@ -49,8 +49,8 @@ _add_bun() {
     ##
     # @note Replace services so they use `bun` instead of `node`
     ##
-    sed -i "s#node:\${BASE_NODE_VERSION}-alpine#\${BUN_SERVICE_IMG}:alpine#g" "$INFRA_FILE"
-    sed -i "s#node:\${BASE_NODE_VERSION}#\${BUN_SERVICE_IMG}#g" "$INFRA_FILE"
+    sed -i "s#node:\${BASE_NODE_VERSION}-alpine#${BUN_SERVICE_IMG}:alpine#g" "$INFRA_FILE"
+    sed -i "s#node:\${BASE_NODE_VERSION}#${BUN_SERVICE_IMG}#g" "$INFRA_FILE"
 
     ##
     # @note Replace `next` scripts so they use `bun` instead of `npm`
