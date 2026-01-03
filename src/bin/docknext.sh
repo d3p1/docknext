@@ -34,7 +34,7 @@ source $BASE_DIR/lib/utils/execute-script.sh
 ##
 main() {
     case "$1" in
-        init | next-install | next-configure | ide-configure | bun-configure)
+        init | next-install | next-configure | ide-configure)
             if [ ! -e ".docknext_profile" ]; then
                 print_message "You must create a \`.docknext_profile\` file with the required exports of environment variables that are used during command execution" "error"
                 print_message "Check for reference: https://github.com/d3p1/docknext/blob/main/src/bin/etc/.docknext_profile.sample" "notice"
@@ -83,7 +83,6 @@ _print_help() {
     print_message " - To install a Next.js platform: \`docknext next-install\`" "normal"
     print_message " - To configure a Next.js platform: \`docknext next-configure\`" "normal"
     print_message " - To configure an IDE: \`docknext ide-configure\`" "normal"
-    print_message " - To configure a Next.js platform to use Bun: \`docknext bun-configure\`" "normal"
     print_message "Before using this script, remember to configure the \`.docknext_profile\` file" "notice"
 }
 
