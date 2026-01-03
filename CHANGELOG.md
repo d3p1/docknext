@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/d3p1/docknext/compare/v1.13.1...v1.13.2) (2026-01-03)
+
+
+### Bug Fixes
+
+* improve adjust app permissions command to use runtime user [[#1](https://github.com/d3p1/docknext/issues/1)] ([f962c66](https://github.com/d3p1/docknext/commit/f962c6664c3dd1bf3daedb1aaaddc5905fb2eb9f))
+
 ## [1.13.1](https://github.com/d3p1/docknext/compare/v1.13.0...v1.13.1) (2026-01-03)
 
 
