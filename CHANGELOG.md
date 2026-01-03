@@ -1,3 +1,10 @@
+## [1.11.2](https://github.com/d3p1/docknext/compare/v1.11.1...v1.11.2) (2026-01-03)
+
+
+### Bug Fixes
+
+* remove unneeded bun-configure command [[#1](https://github.com/d3p1/docknext/issues/1)] ([09645d5](https://github.com/d3p1/docknext/commit/09645d5bb6036b8f441a432e5c153c881d7c4ada))
+
 ## [1.11.1](https://github.com/d3p1/docknext/compare/v1.11.0...v1.11.1) (2026-01-03)
 
 
