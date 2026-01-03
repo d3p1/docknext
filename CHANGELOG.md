@@ -1,3 +1,11 @@
+## [1.13.3](https://github.com/d3p1/docknext/compare/v1.13.2...v1.13.3) (2026-01-03)
+
+
+### Bug Fixes
+
+* add correct runner for entry point scripts [[#1](https://github.com/d3p1/docknext/issues/1)] ([68d8677](https://github.com/d3p1/docknext/commit/68d8677f473b74faca63bd86316682fe75c94316))
+* adjust update app scripts [[#1](https://github.com/d3p1/docknext/issues/1)] ([89e2bc5](https://github.com/d3p1/docknext/commit/89e2bc5f225108f67721818df49fe27a1a81f4b7))
+
 ## [1.13.2](https://github.com/d3p1/docknext/compare/v1.13.1...v1.13.2) (2026-01-03)
 
 
