@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/d3p1/docknext/compare/v1.10.2...v1.11.0) (2026-01-03)
+
+
+### Features
+
+* add bun-configure command [[#1](https://github.com/d3p1/docknext/issues/1)] ([2f8005c](https://github.com/d3p1/docknext/commit/2f8005c406a444fa41651870da282951833ebdab))
+
 ## [1.10.2](https://github.com/d3p1/docknext/compare/v1.10.1...v1.10.2) (2025-12-23)
 
 
