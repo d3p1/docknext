@@ -55,6 +55,8 @@ Using this tool is straightforward:
 
 4. Execute `docknext ide-configure` to simplify the configuration of your IDE, allowing you to work with this generated environment efficiently and effectively.
 
+5. Execute `docknext bun-configure` to configure [`bun`](https://bun.com/) in this environment.  
+
 > [!IMPORTANT]
 > For now, `docknext ide-configure` only installs [startup scripts](https://www.jetbrains.com/help/webstorm/settings-tools-startup-tasks.html) that are very useful for [WebStorm](https://www.jetbrains.com/webstorm/). However, automating the configuration of other important aspects and supporting additional IDEs is still pending. [This ticket](https://github.com/d3p1/docknext/issues/6) will handle the completion of this requirement.
 
