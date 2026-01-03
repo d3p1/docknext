@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/d3p1/docknext/compare/v1.13.0...v1.13.1) (2026-01-03)
+
+
+### Bug Fixes
+
+* add command runner taking into consideration defined runtime [[#1](https://github.com/d3p1/docknext/issues/1)] ([2743aef](https://github.com/d3p1/docknext/commit/2743aef5eded3fd8e554524cf910de08c2059d97))
+
 # [1.13.0](https://github.com/d3p1/docknext/compare/v1.12.0...v1.13.0) (2026-01-03)
 
 
