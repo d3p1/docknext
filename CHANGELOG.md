@@ -1,3 +1,11 @@
+## [1.13.5](https://github.com/d3p1/docknext/compare/v1.13.4...v1.13.5) (2026-01-03)
+
+
+### Bug Fixes
+
+* add commandx runner and command runner to execute with each of them respective app scripts [[#1](https://github.com/d3p1/docknext/issues/1)] ([6d82f73](https://github.com/d3p1/docknext/commit/6d82f73480da4d29e74d2bac0cf182a8edc9b9f9))
+* adjust update app script logic [[#1](https://github.com/d3p1/docknext/issues/1)] ([9c1aabc](https://github.com/d3p1/docknext/commit/9c1aabc0fe90aad336a8f4ff01c66f73a94b5c5a))
+
 ## [1.13.4](https://github.com/d3p1/docknext/compare/v1.13.3...v1.13.4) (2026-01-03)
 
 
