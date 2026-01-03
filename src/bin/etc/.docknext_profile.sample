@@ -34,10 +34,10 @@
 # @note        The `SCRIPT_NEXT_USE_SRC_DIR` is used to define
 #              the use (`1`) or not (`0`) of the `src` directory
 #              for the `docknext next-install`
-#              that uses `npx create-next-app@latest` under the hood
+#              that uses `create-next-app@latest` under the hood
 # @note        The `SCRIPT_NEXT_TEMPLATE` is used to define a template
 #              for the `docknext next-install` command
-#              that uses `npx create-next-app@latest` under the hood
+#              that uses `create-next-app@latest` under the hood
 ##
 export SCRIPT_MODE=""
 export SCRIPT_USER_EMAIL=""

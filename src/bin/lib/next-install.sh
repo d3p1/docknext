@@ -34,7 +34,7 @@ _install_next() {
     #       correctly for the `node` user in the `/app` working directory)
     # @todo Perhaps, instead of having multiple variables for init options,
     #       we could create only one variable that defines all of them.
-    #       Then, we use it inside the `npx create-next-app@latest` command
+    #       Then, we use it inside the `create-next-app@latest` command
     ##
     print_message "Start Next.js installation" "notice"
     local OPTIONS=()
@@ -46,7 +46,7 @@ _install_next() {
             OPTIONS+=("--src-dir")
         fi
     fi
-    docker compose run --rm --user=root cli npx create-next-app@latest ./ "${OPTIONS[@]}"
+    docker compose run --rm --user=root -e OPTIONS="${OPTIONS[*]}" cli bash -c '"${COMMAND_RUNNER}" create-next-app@latest ./ ${OPTIONS[*]}'
     docker compose run --rm --user=root cli chown -R node:node /app
     print_message "End Next.js installation" "notice"
 }
