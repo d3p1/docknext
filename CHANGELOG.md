@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/d3p1/docknext/compare/v1.11.0...v1.11.1) (2026-01-03)
+
+
+### Bug Fixes
+
+* adjust service image update in bun-configure command [[#1](https://github.com/d3p1/docknext/issues/1)] ([d2d5e77](https://github.com/d3p1/docknext/commit/d2d5e777dccc77f098b34c170fde782d0829cec9))
+
 # [1.11.0](https://github.com/d3p1/docknext/compare/v1.10.2...v1.11.0) (2026-01-03)
 
 
