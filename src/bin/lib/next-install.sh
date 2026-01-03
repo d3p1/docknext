@@ -9,6 +9,7 @@
 # @note Import required utilities
 ##
 source $BASE_DIR/lib/utils/log.sh
+source $BASE_DIR/lib/next-configure/utils/runtime.sh
 
 ##
 # Main
@@ -16,15 +17,16 @@ source $BASE_DIR/lib/utils/log.sh
 # @return void
 ##
 main() {
-    _install_next_platform
+    _install_next
+    _configure_next
 }
 
 ##
-# Install Next.js platform
+# Install Next.js
 #
 # @return void
 ##
-_install_next_platform() {
+_install_next() {
     ##
     # @todo For now, it is used a sequence of command to perform installation.
     #       However, it would be better to create an image that already
@@ -35,7 +37,6 @@ _install_next_platform() {
     #       Then, we use it inside the `npx create-next-app@latest` command
     ##
     print_message "Start Next.js installation" "notice"
-
     local OPTIONS=()
     if [ -n "$SCRIPT_NEXT_TEMPLATE" ]; then
         OPTIONS+=("--example $SCRIPT_NEXT_TEMPLATE")
@@ -48,6 +49,18 @@ _install_next_platform() {
     docker compose run --rm --user=root cli npx create-next-app@latest ./ "${OPTIONS[@]}"
     docker compose run --rm --user=root cli chown -R node:node /app
     print_message "End Next.js installation" "notice"
+}
+
+##
+# Configure Next.js
+#
+# @return void
+# @note   Configure custom environment scripts
+##
+_configure_next() {
+    print_message "Start update Next.js scripts" "notice"
+    update_app_scripts
+    print_message "End update Next.js scripts" "notice"
 }
 
 ##
