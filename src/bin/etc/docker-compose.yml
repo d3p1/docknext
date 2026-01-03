@@ -16,7 +16,7 @@
 services:
   traefik:
     image:
-      traefik:v2.10
+      traefik:v${BASE_TRAEFIK_VERSION}
     ports:
       - 80:80
       - 443:443
