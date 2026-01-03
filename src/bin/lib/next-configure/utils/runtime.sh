@@ -21,9 +21,9 @@ declare APP_FILE="package.json"
 #         our environment variables that define our scripts
 ##
 update_app_scripts() {
-    docker compose run --rm cli sed -i "s#\"dev\":.*#\"dev\": \"\$DEV_CMD\"#g" "$APP_FILE"
-    docker compose run --rm cli sed -i "s#\"build\":.*#\"build\": \"\$BUILD_CMD\"#g" "$APP_FILE"
-    docker compose run --rm cli sed -i "s#\"start\":.*#\"start\": \"\$START_CMD\"#g" "$APP_FILE"
+    docker compose run --rm cli sed -i "s#\"dev\":.*,#\"dev\": \"\$DEV_CMD\",#g" "$APP_FILE"
+    docker compose run --rm cli sed -i "s#\"build\":.*,#\"build\": \"\$BUILD_CMD\",#g" "$APP_FILE"
+    docker compose run --rm cli sed -i "s#\"start\":.*,#\"start\": \"\$START_CMD\",#g" "$APP_FILE"
 }
 
 ##
