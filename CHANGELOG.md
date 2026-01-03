@@ -1,3 +1,11 @@
+# [1.12.0](https://github.com/d3p1/docknext/compare/v1.11.2...v1.12.0) (2026-01-03)
+
+
+### Features
+
+* adjust ide-configure command so it dynamically get the container home directory [[#1](https://github.com/d3p1/docknext/issues/1)] ([89fd9b5](https://github.com/d3p1/docknext/commit/89fd9b588b26ec43c9d135eb33bcae57e77cd653))
+* define new environment varibles that define the use of bun as js runtime [[#1](https://github.com/d3p1/docknext/issues/1)] ([4157e58](https://github.com/d3p1/docknext/commit/4157e58b87ee4af42804dee191cc3176025fe39d))
+
 ## [1.11.2](https://github.com/d3p1/docknext/compare/v1.11.1...v1.11.2) (2026-01-03)
 
 
