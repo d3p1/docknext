@@ -10,6 +10,7 @@
 # @note Import required utilities
 ##
 source $BASE_DIR/lib/utils/log.sh
+source $BASE_DIR/lib/next-configure/utils/runtime.sh
 
 ##
 # Main
@@ -48,7 +49,7 @@ _configure_next() {
     docker compose cp "$SCRIPT_DOC_ROOT_DIR/." web:/app
     docker compose run --rm --user=root cli npm install
     docker compose run --rm --user=root cli npm run build
-    docker compose run --rm --user=root cli chown -R node:node /app
+    update_app_permissions
     print_message "End Next.js configuration for prod environment" "notice"
 }
 

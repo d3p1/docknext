@@ -25,3 +25,12 @@ update_app_scripts() {
     docker compose run --rm cli sed -i "s#\"build\":.*#\"dev\": \"$BUILD_CMD\"#g" "$APP_FILE"
     docker compose run --rm cli sed -i "s#\"start\":.*#\"dev\": \"$START_CMD\"#g" "$APP_FILE"
 }
+
+##
+# Update app permissions
+#
+# @return void
+##
+update_app_permissions() {
+    docker compose run --rm --user=root cli bash -c 'chown -R "$RUNTIME_USER":"$RUNTIME_USER" /app'
+}
