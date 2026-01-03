@@ -46,7 +46,7 @@ _install_next() {
             OPTIONS+=("--src-dir")
         fi
     fi
-    docker compose run --rm --user=root -e OPTIONS="${OPTIONS[*]}" cli bash -c '"${COMMAND_RUNNER}" create-next-app@latest ./ ${OPTIONS[*]}'
+    docker compose run --rm --user=root -e OPTIONS="${OPTIONS[*]}" cli bash -c '"${JS_COMMAND_RUNNER}" create-next-app@latest ./ ${OPTIONS[*]}'
     update_app_permissions
     print_message "End Next.js installation" "notice"
 }

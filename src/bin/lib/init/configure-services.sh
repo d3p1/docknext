@@ -58,7 +58,7 @@ _configure_runtime() {
             SCRIPT_JS_RUNTIME_MINIMAL_IMAGE="${JS_RUNTIME_NODE_IMAGE_KEY}:${SCRIPT_NODE_VERSION}-alpine"
             SCRIPT_JS_RUNTIME_IMAGE="${JS_RUNTIME_NODE_IMAGE_KEY}:${SCRIPT_NODE_VERSION}"
             SCRIPT_JS_RUNTIME_USER="${JS_RUNTIME_NODE_USER}"
-            SCRIPT_COMMAND_RUNNER="npx"
+            SCRIPT_JS_COMMAND_RUNNER="npx"
             SCRIPT_DEV_CMD="next dev"
             SCRIPT_BUILD_CMD="next build"
             SCRIPT_START_CMD="next start"
@@ -68,7 +68,7 @@ _configure_runtime() {
             SCRIPT_JS_RUNTIME_MINIMAL_IMAGE="${JS_RUNTIME_BUN_IMAGE_KEY}:${SCRIPT_BUN_VERSION}-alpine"
             SCRIPT_JS_RUNTIME_IMAGE="${JS_RUNTIME_BUN_IMAGE_KEY}:${SCRIPT_BUN_VERSION}"
             SCRIPT_JS_RUNTIME_USER="${JS_RUNTIME_BUN_USER}"
-            SCRIPT_COMMAND_RUNNER="bunx"
+            SCRIPT_JS_COMMAND_RUNNER="bunx"
             SCRIPT_DEV_CMD="bun --bun next dev"
             SCRIPT_BUILD_CMD="bun --bun next build"
             SCRIPT_START_CMD="bun --bun next start"
@@ -77,14 +77,14 @@ _configure_runtime() {
     export SCRIPT_JS_RUNTIME_MINIMAL_IMAGE
     export SCRIPT_JS_RUNTIME_IMAGE
     export SCRIPT_JS_RUNTIME_USER
-    export SCRIPT_COMMAND_RUNNER
+    export SCRIPT_JS_COMMAND_RUNNER
     export SCRIPT_DEV_CMD
     export SCRIPT_BUILD_CMD
     export SCRIPT_START_CMD
     print_env_var "SCRIPT_JS_RUNTIME_MINIMAL_IMAGE"
     print_env_var "SCRIPT_JS_RUNTIME_IMAGE"
     print_env_var "SCRIPT_JS_RUNTIME_USER"
-    print_env_var "SCRIPT_COMMAND_RUNNER"
+    print_env_var "SCRIPT_JS_COMMAND_RUNNER"
     print_env_var "SCRIPT_DEV_CMD"
     print_env_var "SCRIPT_BUILD_CMD"
     print_env_var "SCRIPT_START_CMD"

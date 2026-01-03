@@ -11,7 +11,6 @@
 #              use locally generated SSL certificates
 # @note        The `web` service requires a `package.json` in its root
 #              that has the `next dev` command as the `dev` script
-#              (it runs `npm run dev` as `command`)
 # @note        Mount host folder with developed code into containers
 ##
 services:
@@ -27,7 +26,7 @@ services:
     environment:
       - NODE_ENV=development
     command:
-      npm run dev
+      ${JS_COMMAND_RUNNER} run dev
 
   cli:
     volumes:

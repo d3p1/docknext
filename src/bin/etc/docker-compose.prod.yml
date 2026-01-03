@@ -12,7 +12,6 @@
 # @note        The `web` service requires a `package.json` in its root
 #              that has the `next start` command
 #              as the `start` script, respectively.
-#              (it runs `npm run start` as `command`)
 # @note        The `web` service considered that the app is already
 #              built (that is why it is not executed `next build`)
 ##
@@ -31,4 +30,4 @@ services:
     labels:
       - traefik.http.routers.https-next.tls.certresolver=le-http
     command:
-      npm run start
+      ${JS_COMMAND_RUNNER} run start
