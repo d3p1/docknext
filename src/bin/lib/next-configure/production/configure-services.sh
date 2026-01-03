@@ -47,8 +47,8 @@ _configure_next() {
     print_message "Start Next.js configuration for prod environment" "notice"
     docker compose up -d web
     docker compose cp "$SCRIPT_DOC_ROOT_DIR/." web:/app
-    docker compose run --rm --user=root cli bash -c '"$JS_COMMAND_RUNNER" install'
-    docker compose run --rm --user=root cli bash -c '"$JS_COMMAND_RUNNER" run build'
+    docker compose run --rm --user=root cli bash -c '"${JS_COMMAND_RUNNER}" install'
+    docker compose run --rm --user=root cli bash -c '"${JS_COMMAND_RUNNER}" run build'
     update_app_permissions
     print_message "End Next.js configuration for prod environment" "notice"
 }

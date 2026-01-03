@@ -26,7 +26,7 @@ services:
     environment:
       - NODE_ENV=development
     command:
-      ${JS_COMMAND_RUNNER} run dev
+      ${BASE_JS_COMMAND_RUNNER} run dev
 
   cli:
     volumes:
