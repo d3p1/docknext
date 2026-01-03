@@ -36,16 +36,16 @@ _install_next_platform() {
     ##
     print_message "Start Next.js installation" "notice"
 
+    local OPTIONS=()
     if [ -n "$SCRIPT_NEXT_TEMPLATE" ]; then
-        docker compose run --rm --user=root cli npx create-next-app@latest ./ --example "$SCRIPT_NEXT_TEMPLATE"
+        OPTIONS+=("--example $SCRIPT_NEXT_TEMPLATE")
     else
-        local OPTIONS=("--yes")
+        OPTIONS+=("--yes")
         if [ "$SCRIPT_NEXT_USE_SRC_DIR" != "0" ]; then
             OPTIONS+=("--src-dir")
         fi
-
-        docker compose run --rm --user=root cli npx create-next-app@latest ./ "${OPTIONS[@]}"
     fi
+    docker compose run --rm --user=root cli npx create-next-app@latest ./ "${OPTIONS[@]}"
     docker compose run --rm --user=root cli chown -R node:node /app
     print_message "End Next.js installation" "notice"
 }
