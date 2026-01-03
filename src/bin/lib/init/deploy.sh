@@ -36,13 +36,13 @@ _generate_infra_files() {
     cp "$BASE_DIR/etc/.env" .env
     cp -R "$BASE_DIR/etc/services" ./services
     print_message "End copy infra files" "notice"
-    
+
     ##
     # @note Replace environment variables inside `.env` files with
     #       defined environment variables during this script
     ##
     print_message "Start env files generation" "notice"
-    envsubst_files ".env" '${SCRIPT_USER_EMAIL},${SCRIPT_DOMAIN},${SCRIPT_NODE_VERSION},${SCRIPT_DOC_ROOT_DIR},${SCRIPT_DOCKER_PATH},${SCRIPT_COMPOSE_PROFILES},${SCRIPT_COMPOSE_FILE}'
+    envsubst_files ".env" '${SCRIPT_USER_EMAIL},${SCRIPT_DOMAIN},${SCRIPT_DOC_ROOT_DIR},${SCRIPT_DOCKER_PATH},${SCRIPT_COMPOSE_PROFILES},${SCRIPT_COMPOSE_FILE},${SCRIPT_JS_RUNTIME_MINIMAL_IMAGE},${SCRIPT_JS_RUNTIME_IMAGE},${SCRIPT_JS_RUNTIME_USER},${SCRIPT_DEV_CMD},${SCRIPT_BUILD_CMD},${SCRIPT_START_CMD}'
     print_message "End env files generation" "notice"
 }
 

@@ -37,15 +37,17 @@ services:
 
   web:
     image:
-      node:${BASE_NODE_VERSION}-alpine
+      ${BASE_JS_RUNTIME_MINIMAL_IMAGE}
     expose:
       - 3000
     volumes:
       - docroot:/app
+    env_file:
+      - services/runtime/.env
     working_dir:
       /app
     user:
-      node
+      ${BASE_JS_RUNTIME_USER}
     labels:
       - traefik.enable=true
       - traefik.http.routers.https-next.entrypoints=websecure
@@ -63,13 +65,15 @@ services:
 
   cli:
     image:
-      node:${BASE_NODE_VERSION}
+      ${BASE_JS_RUNTIME_IMAGE}
     volumes:
       - docroot:/app
+    env_file:
+      - services/runtime/.env
     working_dir:
       /app
     user:
-      node
+      ${BASE_JS_RUNTIME_USER}
     labels:
       - traefik.enable=false
     profiles:
