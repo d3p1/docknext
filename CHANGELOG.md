@@ -1,3 +1,13 @@
+# [1.13.0](https://github.com/d3p1/docknext/compare/v1.12.0...v1.13.0) (2026-01-03)
+
+
+### Features
+
+* add node and bun runtime configuration in docknext init command [[#1](https://github.com/d3p1/docknext/issues/1)] ([8c3cebf](https://github.com/d3p1/docknext/commit/8c3cebf1769d9ac72e94329f1222fc2a48cb530d))
+* implement utility that updates next scripts to use custom ones [[#1](https://github.com/d3p1/docknext/issues/1)] ([2a1bd25](https://github.com/d3p1/docknext/commit/2a1bd2571dc8320e38b9dcfabda674eec5874865))
+* updates next scripts in docknext next-configure command [[#1](https://github.com/d3p1/docknext/issues/1)] ([616b139](https://github.com/d3p1/docknext/commit/616b139844106b4462565cf5cfa05ea3d9dc2f52))
+* updates next scripts in docknext next-install command [[#1](https://github.com/d3p1/docknext/issues/1)] ([a6106fd](https://github.com/d3p1/docknext/commit/a6106fd2f65ef84b026f989abe0f8235c172e325))
+
 # [1.12.0](https://github.com/d3p1/docknext/compare/v1.11.2...v1.12.0) (2026-01-03)
 
 
