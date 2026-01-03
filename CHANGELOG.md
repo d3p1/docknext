@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/d3p1/docknext/compare/v1.13.5...v1.14.0) (2026-01-03)
+
+
+### Features
+
+* improve how traefik version is handled [[#1](https://github.com/d3p1/docknext/issues/1)] ([5aa00fb](https://github.com/d3p1/docknext/commit/5aa00fb2e1faf7960014e031c9dc2210cac5d299))
+
 ## [1.13.5](https://github.com/d3p1/docknext/compare/v1.13.4...v1.13.5) (2026-01-03)
 
 
