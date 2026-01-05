@@ -30,7 +30,7 @@ FROM node:22-slim
     #       to the new one (`/home/dev`).
     ##
     RUN groupmod -n ${GROUPNAME} node \
-     && usermod -l ${USERNAME} -d $HOME -m node
+     && usermod -l ${USERNAME} -d ${HOME} -m node
 
     ##
     # @note Set created user as default user
