@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/d3p1/docknext/compare/v1.14.0...v1.15.0) (2026-01-05)
+
+
+### Features
+
+* add js runtime images [[#1](https://github.com/d3p1/docknext/issues/1)] ([16bc69c](https://github.com/d3p1/docknext/commit/16bc69ca60f1f447e45bcff1b3ff7987bd92f7e8))
+
 # [1.14.0](https://github.com/d3p1/docknext/compare/v1.13.5...v1.14.0) (2026-01-03)
 
 
