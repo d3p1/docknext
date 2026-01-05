@@ -10,14 +10,6 @@
 #              use `bun` value for `SCRIPT_JS_RUNTIME`.
 #              If you would like to use Node.js for this environment,
 #              use `node` value for `SCRIPT_JS_RUNTIME`
-# @note        Use `SCRIPT_BUN_VERSION` to define the version of `bun`
-#              that you would like to run.
-#              You must define this variable only
-#              if you set `bun` as the `SCRIPT_JS_RUNTIME`
-# @note        Use `SCRIPT_NODE_VERSION` to define the version of `node`
-#              that you would like to run.
-#              You must define this variable only
-#              if you set `node` as the `SCRIPT_JS_RUNTIME`
 # @note        The `SCRIPT_DOC_ROOT_DIR` must point to the local
 #              app source code.
 #              It is required for development environments to
@@ -44,7 +36,6 @@ export SCRIPT_USER_EMAIL=""
 export SCRIPT_DOMAIN=""
 export SCRIPT_TRAEFIK_VERSION="3.6.6"
 export SCRIPT_JS_RUNTIME="bun"
-export SCRIPT_BUN_VERSION="1.3"
 export SCRIPT_DOC_ROOT_DIR="./www"
 export SCRIPT_IDE_KEY=""
 export SCRIPT_COMPOSE_PROFILES=""

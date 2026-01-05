@@ -17,10 +17,6 @@ source $BASE_DIR/lib/utils/log.sh
 ##
 declare JS_RUNTIME_NODE_KEY="node"
 declare JS_RUNTIME_BUN_KEY="bun"
-declare JS_RUNTIME_NODE_IMAGE_KEY="node"
-declare JS_RUNTIME_BUN_IMAGE_KEY="oven/bun"
-declare JS_RUNTIME_NODE_USER="node"
-declare JS_RUNTIME_BUN_USER="bun"
 
 ##
 # Main
@@ -55,9 +51,6 @@ _configure_runtime() {
     ##
     case "$SCRIPT_JS_RUNTIME" in
         "$JS_RUNTIME_NODE_KEY")
-            SCRIPT_JS_RUNTIME_MINIMAL_IMAGE="${JS_RUNTIME_NODE_IMAGE_KEY}:${SCRIPT_NODE_VERSION}-alpine"
-            SCRIPT_JS_RUNTIME_IMAGE="${JS_RUNTIME_NODE_IMAGE_KEY}:${SCRIPT_NODE_VERSION}"
-            SCRIPT_JS_RUNTIME_USER="${JS_RUNTIME_NODE_USER}"
             SCRIPT_JS_COMMAND_RUNNER="npm"
             SCRIPT_JS_COMMANDX_RUNNER="npx"
             SCRIPT_DEV_CMD="next dev"
@@ -66,9 +59,6 @@ _configure_runtime() {
             ;;
 
         "$JS_RUNTIME_BUN_KEY")
-            SCRIPT_JS_RUNTIME_MINIMAL_IMAGE="${JS_RUNTIME_BUN_IMAGE_KEY}:${SCRIPT_BUN_VERSION}-alpine"
-            SCRIPT_JS_RUNTIME_IMAGE="${JS_RUNTIME_BUN_IMAGE_KEY}:${SCRIPT_BUN_VERSION}"
-            SCRIPT_JS_RUNTIME_USER="${JS_RUNTIME_BUN_USER}"
             SCRIPT_JS_COMMAND_RUNNER="bun"
             SCRIPT_JS_COMMANDX_RUNNER="bunx"
             SCRIPT_DEV_CMD="bun --bun next dev"
@@ -76,17 +66,11 @@ _configure_runtime() {
             SCRIPT_START_CMD="bun --bun next start"
             ;;
     esac
-    export SCRIPT_JS_RUNTIME_MINIMAL_IMAGE
-    export SCRIPT_JS_RUNTIME_IMAGE
-    export SCRIPT_JS_RUNTIME_USER
     export SCRIPT_JS_COMMAND_RUNNER
     export SCRIPT_JS_COMMANDX_RUNNER
     export SCRIPT_DEV_CMD
     export SCRIPT_BUILD_CMD
     export SCRIPT_START_CMD
-    print_env_var "SCRIPT_JS_RUNTIME_MINIMAL_IMAGE"
-    print_env_var "SCRIPT_JS_RUNTIME_IMAGE"
-    print_env_var "SCRIPT_JS_RUNTIME_USER"
     print_env_var "SCRIPT_JS_COMMAND_RUNNER"
     print_env_var "SCRIPT_JS_COMMANDX_RUNNER"
     print_env_var "SCRIPT_DEV_CMD"
