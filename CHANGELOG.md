@@ -1,3 +1,15 @@
+# [1.16.0](https://github.com/d3p1/docknext/compare/v1.15.0...v1.16.0) (2026-01-05)
+
+
+### Bug Fixes
+
+* improve js runtime image names [[#1](https://github.com/d3p1/docknext/issues/1)] ([d230583](https://github.com/d3p1/docknext/commit/d2305837ed78f648ea340caeb5d491e263713688))
+
+
+### Features
+
+* add custom js runtime image to the environment [[#1](https://github.com/d3p1/docknext/issues/1)] ([3dcc0cb](https://github.com/d3p1/docknext/commit/3dcc0cb5a05695ddb129c7bf59ad66781584688f))
+
 # [1.15.0](https://github.com/d3p1/docknext/compare/v1.14.0...v1.15.0) (2026-01-05)
 
 
