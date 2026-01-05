@@ -8,7 +8,7 @@
 ##
 # @note It adds useful tools for development environments
 ##
-FROM d3p1/jsruntime:n22-b13
+FROM d3p1/jsruntime:n22.21-b1.3
     ARG USERNAME="dev"
 
     USER root
