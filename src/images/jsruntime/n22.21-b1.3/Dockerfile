@@ -51,5 +51,7 @@ FROM node:22-slim
 
     ##
     # @note Install `bun` from `bun` stage
+    # @note Install `bunx` from `bun` stage
     ##
     COPY --from=bun /usr/local/bin/bun /usr/local/bin/bun
+    COPY --from=bun /usr/local/bin/bunx /usr/local/bin/bunx
