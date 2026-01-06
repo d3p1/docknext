@@ -68,7 +68,7 @@ Using this tool is straightforward:
 > Please note that [as of now](https://github.com/d3p1/docknext/issues/3), this tool has only been tested on `Debian 12` and requires an environment with `bash` to function correctly.
 
 > [!WARNING]
-> Currently, [this environment](./src/bin/etc/docker-compose.yml) only provides [`node 22.21`](./src/bin/etc/.env) and [`bun 1.3`](./src/bin/etc/.env). It will be improved the supported version provided by our [custom image](./src/images/jsruntime)
+> Currently, [this environment](./src/bin/etc/docker-compose.yml) only works with [`node 22.21`](./src/bin/etc/.env) and [`bun 1.3`](./src/bin/etc/.env). It will be improved the supported version provided by our [custom image](./src/images/jsruntime).
 
 ## Changelog
 
