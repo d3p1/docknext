@@ -10,18 +10,21 @@
 #              use `bun` value for `SCRIPT_JS_RUNTIME`.
 #              If you would like to use Node.js for this environment,
 #              use `node` value for `SCRIPT_JS_RUNTIME`
-# @note        The `SCRIPT_DOC_ROOT_DIR` must point to the local
+# @note        The `SCRIPT_HOST_DOC_ROOT_DIR` must point to the local
 #              app source code.
 #              It is required for development environments to
 #              work with the platform code locally, and also
 #              for production environments so the `docknext next-configure`
 #              knows the location of the platform code that should be
 #              copy to the service/container
+# @note        The `SCRIPT_REMOTE_DOC_ROOT_DIR` must point to the location
+#              where the app source code will be located in the container.
+#              It is not recommended to update this value
 # @note        The `SCRIPT_IDE_KEY` must be set to one of the
 #              following values: `webstorm`, `vscode`, or an empty string ("").
 #              If set to `webstorm` or `vscode`, configuration files related to
 #              the corresponding IDE will be deployed inside
-#              `SCRIPT_DOC_ROOT_DIR` to facilitate the initialization
+#              `SCRIPT_HOST_DOC_ROOT_DIR` to facilitate the initialization
 #              of the working environment
 # @note        The `SCRIPT_NEXT_USE_SRC_DIR` is used to define
 #              the use (`1`) or not (`0`) of the `src` directory
@@ -36,7 +39,8 @@ export SCRIPT_USER_EMAIL=""
 export SCRIPT_DOMAIN=""
 export SCRIPT_TRAEFIK_VERSION="3.6.6"
 export SCRIPT_JS_RUNTIME="bun"
-export SCRIPT_DOC_ROOT_DIR="./www"
+export SCRIPT_HOST_DOC_ROOT_DIR="../www"
+export SCRIPT_REMOTE_DOC_ROOT_DIR="/home/dev/app"
 export SCRIPT_IDE_KEY=""
 export SCRIPT_COMPOSE_PROFILES=""
 export SCRIPT_NEXT_USE_SRC_DIR="1"

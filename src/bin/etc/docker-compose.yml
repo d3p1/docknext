@@ -42,7 +42,7 @@ services:
     expose:
       - 3000
     volumes:
-      - docroot:/home/dev/app
+      - docroot:${BASE_REMOTE_DOC_ROOT_DIR}
     env_file:
       - services/runtime/.env
     labels:
@@ -64,7 +64,7 @@ services:
     image:
       d3p1/jsruntime:n${BASE_NODE_VERSION}-b${BASE_BUN_VERSION}-dev
     volumes:
-      - docroot:/home/dev/app
+      - docroot:${BASE_REMOTE_DOC_ROOT_DIR}
     env_file:
       - services/runtime/.env
     labels:

@@ -32,5 +32,5 @@ update_app_scripts() {
 # @return void
 ##
 update_app_permissions() {
-    docker compose run --rm --user=root cli bash -c 'chown -R "$RUNTIME_USER":"$RUNTIME_USER" /app'
+    docker compose run --rm --user=root cli bash -c 'chown -R "$RUNTIME_USER":"$RUNTIME_USER" "$DOC_ROOT"'
 }

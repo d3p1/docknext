@@ -30,11 +30,7 @@ _install_next() {
     ##
     # @todo For now, it is used a sequence of command to perform installation.
     #       However, it would be better to create an image that already
-    #       has an script that execute these steps (and sets permissions
-    #       correctly for the `node` user in the `/app` working directory)
-    # @todo Perhaps, instead of having multiple variables for init options,
-    #       we could create only one variable that defines all of them.
-    #       Then, we use it inside the `create-next-app@latest` command
+    #       has an script that execute these steps
     ##
     print_message "Start Next.js installation" "notice"
     local OPTIONS=()

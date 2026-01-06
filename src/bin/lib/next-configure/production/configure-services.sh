@@ -41,12 +41,11 @@ _configure_next() {
     ##
     # @todo For now, it is used a sequence of command to perform installation.
     #       However, it would be better to create an image that already
-    #       has an script that execute these steps (and sets permissions
-    #       correctly for the `node` user in the `/app` working directory)
+    #       has an script that execute these steps
     ##
     print_message "Start Next.js configuration for prod environment" "notice"
     docker compose up -d web
-    docker compose cp "$SCRIPT_DOC_ROOT_DIR/." web:/app
+    docker compose cp "$SCRIPT_HOST_DOC_ROOT_DIR/." web:"$BASE_REMOTE_DOC_ROOT_DIR"
     docker compose run --rm --user=root cli bash -c '"${JS_COMMAND_RUNNER}" install'
     docker compose run --rm --user=root cli bash -c '"${JS_COMMAND_RUNNER}" run build'
     update_app_permissions

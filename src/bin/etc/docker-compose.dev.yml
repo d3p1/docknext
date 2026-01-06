@@ -22,7 +22,7 @@ services:
 
   web:
     volumes:
-      - ${BASE_DOC_ROOT_DIR}:/app
+      - ${BASE_HOST_DOC_ROOT_DIR}:${BASE_REMOTE_DOC_ROOT_DIR}
     environment:
       - NODE_ENV=development
     command:
@@ -30,4 +30,4 @@ services:
 
   cli:
     volumes:
-      - ${BASE_DOC_ROOT_DIR}:/app
+      - ${BASE_HOST_DOC_ROOT_DIR}:${BASE_REMOTE_DOC_ROOT_DIR}
