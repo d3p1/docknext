@@ -1,3 +1,10 @@
+## [1.16.2](https://github.com/d3p1/docknext/compare/v1.16.1...v1.16.2) (2026-01-06)
+
+
+### Bug Fixes
+
+* improve how node and bun versions are handled [[#1](https://github.com/d3p1/docknext/issues/1)] ([697cc90](https://github.com/d3p1/docknext/commit/697cc904dd42052fccf37eca2d59fd5dfc1678ed))
+
 ## [1.16.1](https://github.com/d3p1/docknext/compare/v1.16.0...v1.16.1) (2026-01-06)
 
 
