@@ -14,6 +14,7 @@ FROM d3p1/jsruntime:n22.21-b1.3
     USER root
     RUN apt-get update \
      && apt-get install -y --no-install-recommends \
+        ssh \
         git \
         curl \
         ca-certificates \
