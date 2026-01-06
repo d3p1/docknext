@@ -1,3 +1,11 @@
+## [1.16.1](https://github.com/d3p1/docknext/compare/v1.16.0...v1.16.1) (2026-01-06)
+
+
+### Bug Fixes
+
+* add necessary runtime user environment variable [[#1](https://github.com/d3p1/docknext/issues/1)] ([8159976](https://github.com/d3p1/docknext/commit/81599765642d9a05814508099396e2be942289f8))
+* improve how document root location is handled [[#1](https://github.com/d3p1/docknext/issues/1)] ([aada1c0](https://github.com/d3p1/docknext/commit/aada1c03dd1c85bd1c064e02de559c1b7e3545e8))
+
 # [1.16.0](https://github.com/d3p1/docknext/compare/v1.15.0...v1.16.0) (2026-01-05)
 
 
