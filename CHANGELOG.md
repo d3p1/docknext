@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/d3p1/docknext/compare/v1.16.2...v1.17.0) (2026-01-30)
+
+
+### Features
+
+* improve how production app is generated [[#1](https://github.com/d3p1/docknext/issues/1)] ([bedca28](https://github.com/d3p1/docknext/commit/bedca28fd6d1e21cb3d5333660138d83a3042363))
+
 ## [1.16.2](https://github.com/d3p1/docknext/compare/v1.16.1...v1.16.2) (2026-01-06)
 
 
