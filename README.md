@@ -61,7 +61,8 @@ Using this tool is straightforward:
 
 > [!IMPORTANT]
 > The Next.js project must live in a child directory of the directory where the `docknext init` is executed. This is because Docker only can access build context from the directory where the `docker-compose.yml` file is located, and the production image must copy the app source code to then build it and start the app.   
-
+> Additioanlly, the `docknext ide-configure` for JetBrains considers that the [source code lives in a child directory to configure the startup script](https://github.com/d3p1/docknext/blob/768f96f0e030670cb4d986d80b9ec44beed3fb21/src/bin/etc/.idea/runConfigurations/Dev.xml#L8). 
+ 
 > [!IMPORTANT]
 > For now, `docknext ide-configure` only installs [startup scripts](https://www.jetbrains.com/help/webstorm/settings-tools-startup-tasks.html) that are very useful for [WebStorm](https://www.jetbrains.com/webstorm/). However, automating the configuration of other important aspects and supporting additional IDEs is still pending. [This ticket](https://github.com/d3p1/docknext/issues/6) will handle the completion of this requirement.
 
