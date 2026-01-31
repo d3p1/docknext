@@ -9,6 +9,10 @@
 #               up -d`
 # @note        Add Traefik configuration to be able to generate platform 
 #              certificates using Let's Encrypt
+# @note        Send arguments to `web` service to build production image.
+#              The most important one is `BUILD_CMD`
+#              because these is the one that build app but it is not present
+#              at build time (just at runtime)
 ##
 services:
   traefik:
@@ -21,12 +25,13 @@ services:
 
   web:
     build:
-      context: ${SCRIPT_HOST_DOC_ROOT_DIR}
+      context: ${BASE_HOST_DOC_ROOT_DIR}
       args:
         - BASE_NODE_VERSION=${BASE_NODE_VERSION}
         - BASE_BUN_VERSION=${BASE_BUN_VERSION}
         - BASE_REMOTE_DOC_ROOT_DIR=${BASE_REMOTE_DOC_ROOT_DIR}
         - BASE_JS_COMMAND_RUNNER=${BASE_JS_COMMAND_RUNNER}
+        - BUILD_CMD=${BASE_BUILD_CMD}
     environment:
       - NODE_ENV=production
     labels:

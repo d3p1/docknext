@@ -16,6 +16,8 @@
 # @note        At build time, `JS_COMMAND_RUNNER` is not being defined,
 #              that is why we should send `BASE_JS_COMMAND_RUNNER` as argument.
 #              However, at runtime the `JS_COMMAND_RUNNER` is already defined
+# @note        The argument `BUILD_CMD` is being used when it is build the
+#              app with `${BASE_JS_COMMAND_RUNNER} run build`
 # @link        https://github.com/leerob/next-self-host/blob/main/Dockerfile
 ##
 ARG BASE_NODE_VERSION
@@ -24,16 +26,19 @@ ARG BASE_BUN_VERSION
 FROM d3p1/jsruntime:n${BASE_NODE_VERSION}-b${BASE_BUN_VERSION} AS builder
     ARG BASE_REMOTE_DOC_ROOT_DIR
     ARG BASE_JS_COMMAND_RUNNER
+    ARG BUILD_CMD
     USER dev
     WORKDIR ${BASE_REMOTE_DOC_ROOT_DIR}
-    COPY --chown=dev:dev . .
+    COPY --chown=dev:dev package*.json bun.lockb* .
     RUN ${BASE_JS_COMMAND_RUNNER} install
+    COPY --chown=dev:dev . .
     RUN ${BASE_JS_COMMAND_RUNNER} run build
 
 FROM d3p1/jsruntime:n${BASE_NODE_VERSION}-b${BASE_BUN_VERSION} AS runner
     ARG BASE_REMOTE_DOC_ROOT_DIR
     USER dev
     WORKDIR ${BASE_REMOTE_DOC_ROOT_DIR}
+    COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/package.json" ./package.json
     COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/public" ./public
     COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/.next" ./.next
     CMD ${JS_COMMAND_RUNNER} run start

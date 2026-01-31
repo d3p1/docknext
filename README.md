@@ -57,7 +57,10 @@ Using this tool is straightforward:
 
 5. Execute `docknext ide-configure` to simplify the configuration of your IDE, allowing you to work with this generated environment efficiently and effectively.
 
-6. Finally. execute `docker-compose up -d` to start the generated environment. 
+6. Finally, execute `docker-compose up -d` to start the generated environment. 
+
+> [!IMPORTANT]
+> In production mode, you must build the `web` image before starting the environment with `docker compose build --no-cache web`.
 
 > [!IMPORTANT]
 > The Next.js project must live in a child directory of the directory where the `docknext init` is executed. This is because Docker only can access build context from the directory where the `docker-compose.yml` file is located, and the production image must copy the app source code to then build it and start the app.   
