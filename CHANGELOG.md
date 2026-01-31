@@ -1,3 +1,10 @@
+## [1.17.3](https://github.com/d3p1/docknext/compare/v1.17.2...v1.17.3) (2026-01-31)
+
+
+### Bug Fixes
+
+* adjust Dockerfile.prod copy location on next configure logic [[#1](https://github.com/d3p1/docknext/issues/1)] ([02abd00](https://github.com/d3p1/docknext/commit/02abd00affc520de34f25116f721c405a7a3889e))
+
 ## [1.17.2](https://github.com/d3p1/docknext/compare/v1.17.1...v1.17.2) (2026-01-31)
 
 
