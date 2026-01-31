@@ -1,3 +1,10 @@
+## [1.17.7](https://github.com/d3p1/docknext/compare/v1.17.6...v1.17.7) (2026-01-31)
+
+
+### Bug Fixes
+
+* copy required node modules for start script into production image [[#1](https://github.com/d3p1/docknext/issues/1)] ([982b2c2](https://github.com/d3p1/docknext/commit/982b2c2073e7ee27268b728580c6d00cfb98e6ba))
+
 ## [1.17.6](https://github.com/d3p1/docknext/compare/v1.17.5...v1.17.6) (2026-01-31)
 
 
