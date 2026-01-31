@@ -21,10 +21,12 @@ services:
 
   web:
     build:
-      context: ./services/web
+      context: ${SCRIPT_HOST_DOC_ROOT_DIR}
       args:
-        - BASE_HOST_DOC_ROOT_DIR=${BASE_HOST_DOC_ROOT_DIR}
+        - BASE_NODE_VERSION=${BASE_NODE_VERSION}
+        - BASE_BUN_VERSION=${BASE_BUN_VERSION}
         - BASE_REMOTE_DOC_ROOT_DIR=${BASE_REMOTE_DOC_ROOT_DIR}
+        - BASE_JS_COMMAND_RUNNER=${BASE_JS_COMMAND_RUNNER}
     environment:
       - NODE_ENV=production
     labels:
