@@ -1,3 +1,10 @@
+## [1.17.6](https://github.com/d3p1/docknext/compare/v1.17.5...v1.17.6) (2026-01-31)
+
+
+### Bug Fixes
+
+* adjust copy of next binary for production environments [[#1](https://github.com/d3p1/docknext/issues/1)] ([0371668](https://github.com/d3p1/docknext/commit/0371668114655cbec991d9127447c8f336ffcce3))
+
 ## [1.17.5](https://github.com/d3p1/docknext/compare/v1.17.4...v1.17.5) (2026-01-31)
 
 
