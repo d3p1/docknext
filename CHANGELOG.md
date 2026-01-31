@@ -1,3 +1,10 @@
+## [1.17.5](https://github.com/d3p1/docknext/compare/v1.17.4...v1.17.5) (2026-01-31)
+
+
+### Bug Fixes
+
+* solve next not found for start script in production environments [[#1](https://github.com/d3p1/docknext/issues/1)] ([8c545f2](https://github.com/d3p1/docknext/commit/8c545f2ae71b7fe07da608b0911b4e900ec26cf7))
+
 ## [1.17.4](https://github.com/d3p1/docknext/compare/v1.17.3...v1.17.4) (2026-01-31)
 
 
