@@ -1,3 +1,12 @@
+## [1.17.1](https://github.com/d3p1/docknext/compare/v1.17.0...v1.17.1) (2026-01-31)
+
+
+### Bug Fixes
+
+* improve configure next command so it copies production Dockerfile [[#1](https://github.com/d3p1/docknext/issues/1)] ([91a5be1](https://github.com/d3p1/docknext/commit/91a5be1814a7f4c61c6c056e200b767510fc77f2))
+* improve docker compose production file so it builds new Dockerfile inside source code [[#1](https://github.com/d3p1/docknext/issues/1)] ([e61a96b](https://github.com/d3p1/docknext/commit/e61a96b23c8d4053cc909489bf2ec3345a687a33))
+* improve docker production image [[#1](https://github.com/d3p1/docknext/issues/1)] ([2358585](https://github.com/d3p1/docknext/commit/2358585ee3ec01dfd104bd4fbf5daf3689a9914e))
+
 # [1.17.0](https://github.com/d3p1/docknext/compare/v1.16.2...v1.17.0) (2026-01-30)
 
 
