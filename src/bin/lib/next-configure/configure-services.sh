@@ -36,7 +36,7 @@ main() {
 _configure_next() {
     print_message "Start Next.js configuration" "notice"
     update_app_scripts
-    cp -R "$BASE_DIR/etc/services/web/Dockerfile.prod" "$SCRIPT_HOST_DOC_ROOT_DIR/Dockerfile"
+    cp -R "$BASE_DIR/etc/Dockerfile.prod" "$SCRIPT_HOST_DOC_ROOT_DIR/Dockerfile"
     print_message "End Next.js configuration" "notice"
 }
 
