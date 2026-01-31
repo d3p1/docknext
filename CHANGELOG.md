@@ -1,3 +1,10 @@
+## [1.17.2](https://github.com/d3p1/docknext/compare/v1.17.1...v1.17.2) (2026-01-31)
+
+
+### Bug Fixes
+
+* adjust JetBrains IDE startup script [[#1](https://github.com/d3p1/docknext/issues/1)] ([768f96f](https://github.com/d3p1/docknext/commit/768f96f0e030670cb4d986d80b9ec44beed3fb21))
+
 ## [1.17.1](https://github.com/d3p1/docknext/compare/v1.17.0...v1.17.1) (2026-01-31)
 
 
