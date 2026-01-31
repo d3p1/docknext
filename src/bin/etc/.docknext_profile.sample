@@ -11,7 +11,8 @@
 #              If you would like to use Node.js for this environment
 #              as the runtime engine, use `node` value for `SCRIPT_JS_RUNTIME`
 # @note        The `SCRIPT_HOST_DOC_ROOT_DIR` must point to the local
-#              app source code.
+#              app source code that must be located in a child directory
+#              of the directory where this environment is generated.
 #              It is required for development environments to
 #              work with the platform code locally, and also
 #              for production environments to copy the
@@ -42,7 +43,7 @@ export SCRIPT_USER_EMAIL=""
 export SCRIPT_DOMAIN=""
 export SCRIPT_TRAEFIK_VERSION="3.6.6"
 export SCRIPT_JS_RUNTIME="bun"
-export SCRIPT_HOST_DOC_ROOT_DIR="../www"
+export SCRIPT_HOST_DOC_ROOT_DIR="./www"
 export SCRIPT_REMOTE_DOC_ROOT_DIR="/home/dev/app"
 export SCRIPT_NODE_VERSION="22.21"
 export SCRIPT_BUN_VERSION="1.3"

@@ -51,9 +51,16 @@ Using this tool is straightforward:
 
 2. Execute `docknext init` to generate the necessary [Docker Compose](https://docs.docker.com/compose/) files for the project.
 
-3. Execute `docknext next-install` if you want to install a new Next.js platform to work with the current generated environment. Or execute `docknext next-configure` if you want to configure an existing Next.js project to work with the current environment.
+3. Execute `docknext next-install` if you want to install a new Next.js platform to work with the current generated environment.
 
-4. Execute `docknext ide-configure` to simplify the configuration of your IDE, allowing you to work with this generated environment efficiently and effectively.
+4. Execute `docknext next-configure` to configure the Next.js project. This will execute a final setup so the existing Next.js project is ready to work with the generated environment.
+
+5. Execute `docknext ide-configure` to simplify the configuration of your IDE, allowing you to work with this generated environment efficiently and effectively.
+
+6. Finally. execute `docker-compose up -d` to start the generated environment. 
+
+> [!IMPORTANT]
+> The Next.js project must live in a child directory of the directory where the `docknext init` is executed. This is because Docker only can access build context from the directory where the `docker-compose.yml` file is located, and the production image must copy the app source code to then build it and start the app.   
 
 > [!IMPORTANT]
 > For now, `docknext ide-configure` only installs [startup scripts](https://www.jetbrains.com/help/webstorm/settings-tools-startup-tasks.html) that are very useful for [WebStorm](https://www.jetbrains.com/webstorm/). However, automating the configuration of other important aspects and supporting additional IDEs is still pending. [This ticket](https://github.com/d3p1/docknext/issues/6) will handle the completion of this requirement.
