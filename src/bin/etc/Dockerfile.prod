@@ -45,5 +45,5 @@ FROM d3p1/jsruntime:n${BASE_NODE_VERSION}-b${BASE_BUN_VERSION} AS runner
     COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/package.json" ./package.json
     COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/public" ./public
     COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/.next" ./.next
-    COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/node_modules/.bin/.next" ./node_modules/.bin/.next
+    COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/node_modules/.bin/next" ./node_modules/.bin/next
     CMD ${JS_COMMAND_RUNNER} run start
