@@ -1,3 +1,10 @@
+## [1.17.4](https://github.com/d3p1/docknext/compare/v1.17.3...v1.17.4) (2026-01-31)
+
+
+### Bug Fixes
+
+* adjust production image generation [[#1](https://github.com/d3p1/docknext/issues/1)] ([2a9aff5](https://github.com/d3p1/docknext/commit/2a9aff518e63a5ff6ebf157c40cd6461f89a1867))
+
 ## [1.17.3](https://github.com/d3p1/docknext/compare/v1.17.2...v1.17.3) (2026-01-31)
 
 
