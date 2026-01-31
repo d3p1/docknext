@@ -19,7 +19,7 @@
 # @note        The argument `BUILD_CMD` is being used when it is build the
 #              app with `${BASE_JS_COMMAND_RUNNER} run build`
 # @todo        For now, we are also
-#              copying `node_modules/.bin/next` into `runner`
+#              copying `node_modules` into `runner`
 #              because we need `next` script for `start` command.
 #              Improve this logic
 # @link        https://github.com/leerob/next-self-host/blob/main/Dockerfile
@@ -45,5 +45,5 @@ FROM d3p1/jsruntime:n${BASE_NODE_VERSION}-b${BASE_BUN_VERSION} AS runner
     COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/package.json" ./package.json
     COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/public" ./public
     COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/.next" ./.next
-    COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/node_modules/.bin/next" ./node_modules/.bin/next
+    COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/node_modules" ./node_modules
     CMD ${JS_COMMAND_RUNNER} run start
