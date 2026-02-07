@@ -13,6 +13,9 @@
 #              The most important one is `BUILD_CMD`
 #              because these is the one that build app but it is not present
 #              at build time (just at runtime)
+# @note        For the `web` service, is set the `pull_policy` to `always`,
+#              to ensure that the latest image is always used.
+#              Additionally, we set its tag to `latest` for the same reason
 ##
 services:
   traefik:
@@ -24,6 +27,8 @@ services:
       - TRAEFIK_CERTIFICATESRESOLVERS_LE-HTTP_ACME_HTTPCHALLENGE_ENTRYPOINT=web
 
   web:
+    image: ${BASE_WEB_IMAGE_NAME}:latest
+    pull_policy: always
     build:
       context: ${BASE_HOST_DOC_ROOT_DIR}
       args:
