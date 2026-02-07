@@ -31,7 +31,7 @@ main() {
     #       without sharing our private keys.
     #       This is useful to work with SSH repositories
     ##
-    docker compose run --rm -it -v ~/.gitconfig:${CONTAINER_HOME_DIR}/.gitconfig -v ${SSH_AUTH_SOCK}:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent cli /bin/bash
+    docker compose run --rm -it -v ~/.gitconfig:${CONTAINER_HOME_DIR}/.gitconfig -v ~/.ssh:${CONTAINER_HOME_DIR}/.ssh -v ${SSH_AUTH_SOCK}:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent cli /bin/bash
 }
 
 ##
