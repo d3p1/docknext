@@ -65,10 +65,10 @@ Using this tool is straightforward:
 > 1. In your local/CI environment, pull latest code from the repository.
 > 2. Build the `web` image.
 > 3. Push `web` image to the registry.
-> 4. In your production environment, execute `docker compose up -d`. Because the `pull_policy` is set to `always` for the `web` service, the latest image will be pulled and used.
+> 4. In your production environment, execute `docker compose up -d`. Because the [`pull_policy` is set to `always` for the `web` service](https://github.com/d3p1/docknext/blob/main/src/bin/etc/docker-compose.prod.yml#L31), the latest image will be pulled and used.
 
 > [!NOTE]
-> There are templates that comes with the [`d3p1/semantic-releasify`](https://github.com/d3p1/semantic-releasify/), that publish the project image on every release: [`d3p1/nextjs-static-template`](https://github.com/d3p1/nextjs-static-template) and [`d3p1/nextjs-standalone-template`](https://github.com/d3p1/nextjs-standalone-template).
+> If you use [GitHub Actions](https://github.com/features/actions) to automate your development and delivery workflow, you can use the [`d3p1/semantic-releasify` action](https://github.com/d3p1/semantic-releasify/) to publish the `web` image on every release.
 
 > [!IMPORTANT]
 > The Next.js project must live in a child directory of the directory where the `docknext init` is executed. This is because Docker only can access build context from the directory where the `docker-compose.yml` file is located, and the production image must copy the app source code to then build it and start the app.   
