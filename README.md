@@ -59,8 +59,7 @@ Using this tool is straightforward:
 
 6. Finally, execute `docker-compose up -d` to start the generated environment. 
 
-> [!IMPORTANT]
-> In production mode, you must build the `web` image before starting the environment with `docker compose build --no-cache web`.
+> [!NOTE]
 > A recommended release approach could be:
 > 1. In your local/CI environment, pull latest code from the repository.
 > 2. Build the `web` image.
