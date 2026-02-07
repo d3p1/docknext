@@ -1,3 +1,11 @@
+# [1.18.0](https://github.com/d3p1/docknext/compare/v1.17.7...v1.18.0) (2026-02-07)
+
+
+### Features
+
+* improve default argument values on production dockerfile generation [[#13](https://github.com/d3p1/docknext/issues/13)] ([217a553](https://github.com/d3p1/docknext/commit/217a553cf83d02225e1c1d80f14dbcd9436caa14))
+* improve how production environments pull, build and use web production image [[#13](https://github.com/d3p1/docknext/issues/13)] ([71547ec](https://github.com/d3p1/docknext/commit/71547ecb7dc521fdd76ab7b6f71fb7569d77711e))
+
 ## [1.17.7](https://github.com/d3p1/docknext/compare/v1.17.6...v1.17.7) (2026-01-31)
 
 
