@@ -9,6 +9,7 @@
 ##
 # @note Import required utilities
 ##
+source $BASE_DIR/lib/utils/envsubst-files.sh
 source $BASE_DIR/lib/next-configure/utils/runtime.sh
 
 ##
@@ -35,8 +36,23 @@ main() {
 ##
 _configure_next() {
     print_message "Start Next.js configuration" "notice"
+
+    ##
+    # @note Update `package.json` scripts to use environment scripts
+    ##
     update_app_scripts
+
+    ##
+    # @note Copy `Dockerfile` to app so it is possible
+    #       to build production image
+    # @note Replace `${SCRIPT_*}` variables inside `Dockerfile` with
+    #       current environment data.
+    #       In that way, the `Dockerfile` already has useful default data
+    #       for the production image generation
+    ##
     cp -R "$BASE_DIR/etc/Dockerfile.prod" "$SCRIPT_HOST_DOC_ROOT_DIR/Dockerfile"
+    envsubst_files "$SCRIPT_HOST_DOC_ROOT_DIR/Dockerfile" '${SCRIPT_NODE_VERSION},${SCRIPT_BUN_VERSION},${SCRIPT_REMOTE_DOC_ROOT_DIR},${SCRIPT_JS_COMMAND_RUNNER},${SCRIPT_BUILD_CMD}'
+
     print_message "End Next.js configuration" "notice"
 }
 

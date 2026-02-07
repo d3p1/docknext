@@ -18,19 +18,23 @@
 #              However, at runtime the `JS_COMMAND_RUNNER` is already defined
 # @note        The argument `BUILD_CMD` is being used when it is build the
 #              app with `${BASE_JS_COMMAND_RUNNER} run build`
+# @note        Remember that this script is generated
+#              by `docknext next-configure`, and that script
+#              is in charge of replacing `${SCRIPT_*}` variables
+#              by actual values
 # @todo        For now, we are also
 #              copying `node_modules` into `runner`
 #              because we need `next` script for `start` command.
 #              Improve this logic
 # @link        https://github.com/leerob/next-self-host/blob/main/Dockerfile
 ##
-ARG BASE_NODE_VERSION
-ARG BASE_BUN_VERSION
+ARG BASE_NODE_VERSION="${SCRIPT_NODE_VERSION}"
+ARG BASE_BUN_VERSION="${SCRIPT_BUN_VERSION}"
 
 FROM d3p1/jsruntime:n${BASE_NODE_VERSION}-b${BASE_BUN_VERSION} AS builder
-    ARG BASE_REMOTE_DOC_ROOT_DIR
-    ARG BASE_JS_COMMAND_RUNNER
-    ARG BUILD_CMD
+    ARG BASE_REMOTE_DOC_ROOT_DIR="${SCRIPT_REMOTE_DOC_ROOT_DIR}"
+    ARG BASE_JS_COMMAND_RUNNER="${SCRIPT_JS_COMMAND_RUNNER}"
+    ARG BUILD_CMD="${SCRIPT_BUILD_CMD}"
     USER dev
     WORKDIR ${BASE_REMOTE_DOC_ROOT_DIR}
     COPY --chown=dev:dev package*.json bun.lockb* .
@@ -39,7 +43,8 @@ FROM d3p1/jsruntime:n${BASE_NODE_VERSION}-b${BASE_BUN_VERSION} AS builder
     RUN ${BASE_JS_COMMAND_RUNNER} run build
 
 FROM d3p1/jsruntime:n${BASE_NODE_VERSION}-b${BASE_BUN_VERSION} AS runner
-    ARG BASE_REMOTE_DOC_ROOT_DIR
+    ARG BASE_REMOTE_DOC_ROOT_DIR="${SCRIPT_REMOTE_DOC_ROOT_DIR}"
+    ENV NODE_ENV="production"
     USER dev
     WORKDIR ${BASE_REMOTE_DOC_ROOT_DIR}
     COPY --from=builder --chown=dev:dev "${BASE_REMOTE_DOC_ROOT_DIR}/package.json" ./package.json
