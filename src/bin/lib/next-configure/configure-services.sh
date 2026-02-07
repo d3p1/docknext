@@ -45,12 +45,23 @@ _configure_next() {
     ##
     # @note Copy `Dockerfile` to app so it is possible
     #       to build production image
+    ##
+    cp -R "$BASE_DIR/etc/Dockerfile.prod" "$SCRIPT_HOST_DOC_ROOT_DIR/Dockerfile"
+
+    ##
     # @note Replace `${SCRIPT_*}` variables inside `Dockerfile` with
     #       current environment data.
     #       In that way, the `Dockerfile` already has useful default data
     #       for the production image generation
+    # @note We are sourcing `.env` to get required `${SCRIPT_*}` data.
+    #       It is decided to use `${SCRIPT_*}` instead of directly
+    #       `.env` variables because this utility identify every
+    #       variable that is being replaced by it with the `SCRIPT_*` prefix
+    # @todo Improve this logic
     ##
-    cp -R "$BASE_DIR/etc/Dockerfile.prod" "$SCRIPT_HOST_DOC_ROOT_DIR/Dockerfile"
+    source .env
+    export SCRIPT_JS_COMMAND_RUNNER="$BASE_JS_COMMAND_RUNNER"
+    export SCRIPT_BUILD_CMD="$BASE_BUILD_CMD"
     envsubst_files "$SCRIPT_HOST_DOC_ROOT_DIR/Dockerfile" '${SCRIPT_NODE_VERSION},${SCRIPT_BUN_VERSION},${SCRIPT_REMOTE_DOC_ROOT_DIR},${SCRIPT_JS_COMMAND_RUNNER},${SCRIPT_BUILD_CMD}'
 
     print_message "End Next.js configuration" "notice"
