@@ -1,3 +1,11 @@
+## [1.18.1](https://github.com/d3p1/docknext/compare/v1.18.0...v1.18.1) (2026-02-07)
+
+
+### Bug Fixes
+
+* adjust generation of production dockerfile for web service [[#13](https://github.com/d3p1/docknext/issues/13)] ([b97178c](https://github.com/d3p1/docknext/commit/b97178c2d824436fcde64b4ff46fde249b13da6f))
+* adjust IDE startup script [[#1](https://github.com/d3p1/docknext/issues/1)] ([eca1960](https://github.com/d3p1/docknext/commit/eca196046fd6004e51c9b272232923c3cb3db702))
+
 # [1.18.0](https://github.com/d3p1/docknext/compare/v1.17.7...v1.18.0) (2026-02-07)
 
 
