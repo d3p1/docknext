@@ -16,10 +16,6 @@ The main idea behind this tool is to have an automatic way to generate [Next.js]
 > [!NOTE]
 > It will continue improving to add other relevant services to the tech stack like SMTP, database, etc. They will be ready to use to facilitate the release of complex apps/developments.
 
-It is worth mentioning that this tool was inspired by the following excellent project that achieves similar goals:
-
-- [Next.js Self Hosting Example](https://github.com/leerob/next-self-host)
-
 ## Prerequisites
 
 Before using this tool, ensure that you have:
