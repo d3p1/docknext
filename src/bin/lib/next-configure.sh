@@ -19,11 +19,6 @@ source $BASE_DIR/lib/utils/execute-command-script.sh
 # @todo   Implement Next.js image with an script that executes this logic
 ##
 main() {
-    ##
-    # @note Before executing the script that configures a Next.js platform,
-    #       it is required to prepare the environment services to meet
-    #       conditions needed for a Next.js configuration
-    ##
     _execute_configure_script "configure-services"
 }
 
