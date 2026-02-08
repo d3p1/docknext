@@ -15,8 +15,8 @@
 #              of the directory where this environment is generated.
 #              It is required for development environments to
 #              work with the platform code locally, and also
-#              for production environments to copy the
-#              platform code to the service/container
+#              for production environments to build the image with the
+#              platform code
 # @note        The `SCRIPT_REMOTE_DOC_ROOT_DIR` must point to the location
 #              where the app source code will be located in the container.
 #              It is not recommended to update this value
