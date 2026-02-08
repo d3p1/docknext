@@ -53,7 +53,7 @@ Using this tool is straightforward:
 
 5. Execute `docknext ide-configure` to simplify the configuration of your IDE, allowing you to work with this generated environment efficiently and effectively.
 
-6. Finally, execute `docker-compose up -d` to start the generated environment. 
+6. Finally, execute `docker compose up -d` to start the generated environment. 
 
 > [!NOTE]
 > A recommended release approach could be:
