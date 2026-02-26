@@ -26,7 +26,8 @@ main() {
 #
 # @return void
 # @note   Configure custom environment scripts
-# @note   Add `Dockerfile` required for production environments.
+# @note   Add `Dockerfile` and `.dockerignore` required for
+#         production environments.
 #         It is decided to add this step here instead of in a
 #         production scope, because this is something related to the
 #         platform source code and not to the production environment itself.
@@ -43,10 +44,11 @@ _configure_next() {
     update_app_scripts
 
     ##
-    # @note Copy `Dockerfile` to app so it is possible
+    # @note Copy `Dockerfile` and `.dockerignore` to app so it is possible
     #       to build production image
     ##
     cp -R "$BASE_DIR/etc/Dockerfile.prod" "$SCRIPT_HOST_DOC_ROOT_DIR/Dockerfile"
+    cp -R "$BASE_DIR/etc/.dockerignore.prod" "$SCRIPT_HOST_DOC_ROOT_DIR/.dockerignore"
 
     ##
     # @note Replace `${SCRIPT_*}` variables inside `Dockerfile` with

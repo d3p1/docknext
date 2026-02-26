@@ -1,0 +1,16 @@
+##
+# @description File to exclude file/directories from production app image
+# @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
+# @note        This `.dockerignore` will be copied
+#              into the `BASE_HOST_DOC_ROOT_DIR`
+#              by the `docknext next-configure` command.
+#              In that way, we exclude from the build context sensitive files
+#              from the production image that will be used by the
+#              `web` service
+# @link        https://docs.docker.com/build/concepts/context/#dockerignore-files
+##
+
+##
+# @note Exclude environment files
+##
+.env*
