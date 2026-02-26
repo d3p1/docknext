@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/d3p1/docknext/compare/v1.18.1...v1.19.0) (2026-02-26)
+
+
+### Features
+
+* add .dockerignore file to avoid building production image with environment files [[#1](https://github.com/d3p1/docknext/issues/1)] ([dce2784](https://github.com/d3p1/docknext/commit/dce278488871b39e8670af6b3cb45aeab96105d2))
+
 ## [1.18.1](https://github.com/d3p1/docknext/compare/v1.18.0...v1.18.1) (2026-02-07)
 
 
