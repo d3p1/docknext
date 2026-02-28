@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/d3p1/docknext/compare/v1.19.0...v1.20.0) (2026-02-28)
+
+
+### Features
+
+* add release ID machanism for production deploy [[#1](https://github.com/d3p1/docknext/issues/1)] ([495eddc](https://github.com/d3p1/docknext/commit/495eddc58ed76735a59eeb97b2aa56506e5276de))
+
 # [1.19.0](https://github.com/d3p1/docknext/compare/v1.18.1...v1.19.0) (2026-02-26)
 
 
