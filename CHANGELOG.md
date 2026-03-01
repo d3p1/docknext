@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/d3p1/docknext/compare/v1.20.0...v1.21.0) (2026-03-01)
+
+
+### Features
+
+* add docknext up command [[#1](https://github.com/d3p1/docknext/issues/1)] ([cf7d4dd](https://github.com/d3p1/docknext/commit/cf7d4ddcfbc7c7deba3ee184534d5ff1e9fa58c0))
+
 # [1.20.0](https://github.com/d3p1/docknext/compare/v1.19.0...v1.20.0) (2026-02-28)
 
 
