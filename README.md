@@ -53,17 +53,17 @@ Using this tool is straightforward:
 
 5. Execute `docknext ide-configure` to simplify the configuration of your IDE, allowing you to work with this generated environment efficiently and effectively.
 
-6. Finally, execute `docker compose up -d` to start the generated environment. 
+6. Finally, execute `docknext up` to start the generated environment. 
 
 > [!NOTE]
 > A recommended release approach could be:
 > 1. In your local/CI environment, pull latest code from the repository.
 > 2. Build the `web` image.
 > 3. Push `web` image to the registry.
-> 4. In your production environment, execute `RELEASE_ID="<release-id>" docker compose up -d`. Update `<release-id>` with the respective value. Because the [`pull_policy` is set to `always` for the `web` service](https://github.com/d3p1/docknext/blob/main/src/bin/etc/docker-compose.prod.yml#L48), the latest image will be pulled and used.
+> 4. In your production environment, execute `docknext up`. 
 
 > [!NOTE]
-> If you want to know more about why the command for production environments must be `RELEASE_ID="<release-id>" docker compose up -d`, refer to the [wiki page](https://github.com/d3p1/docknext/wiki) (currently, [_in progress_](https://github.com/d3p1/docknext/issues/4)).
+> When starting the production environment, because the [`pull_policy` is set to `always` for the `web` service](https://github.com/d3p1/docknext/blob/main/src/bin/etc/docker-compose.prod.yml#L48), the latest image will be pulled and used.
 
 > [!NOTE]
 > If you use [GitHub Actions](https://github.com/features/actions) to automate your development and delivery workflow, you can use the [`d3p1/semantic-releasify` action](https://github.com/d3p1/semantic-releasify/) to publish the `web` image on every release.
