@@ -1,3 +1,10 @@
+## [1.21.1](https://github.com/d3p1/docknext/compare/v1.21.0...v1.21.1) (2026-03-01)
+
+
+### Bug Fixes
+
+* adjust docker compose project name so it does not use not allowed uppercase [[#1](https://github.com/d3p1/docknext/issues/1)] ([77ff16a](https://github.com/d3p1/docknext/commit/77ff16ab838a36bc2e24689602d8f1030257a934))
+
 # [1.21.0](https://github.com/d3p1/docknext/compare/v1.20.0...v1.21.0) (2026-03-01)
 
 
