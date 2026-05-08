@@ -1,3 +1,10 @@
+## [1.21.2](https://github.com/d3p1/docknext/compare/v1.21.1...v1.21.2) (2026-05-08)
+
+
+### Bug Fixes
+
+* improve code style [[#1](https://github.com/d3p1/docknext/issues/1)] ([3e029bd](https://github.com/d3p1/docknext/commit/3e029bdfb606fe1a5d5ccc1d595a9538d5a94c65))
+
 ## [1.21.1](https://github.com/d3p1/docknext/compare/v1.21.0...v1.21.1) (2026-03-01)
 
 
