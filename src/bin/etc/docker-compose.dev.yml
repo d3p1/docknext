@@ -14,20 +14,20 @@
 # @note        Mount host folder with developed code into containers
 ##
 services:
-  traefik:
-    volumes:
-      - ./services/traefik/etc:/etc/traefik
-    environment:
-      - TRAEFIK_PROVIDERS_FILE_DIRECTORY=/etc/traefik/file-provider
+    traefik:
+        volumes:
+            - ./services/traefik/etc:/etc/traefik
+        environment:
+            - TRAEFIK_PROVIDERS_FILE_DIRECTORY=/etc/traefik/file-provider
 
-  web:
-    volumes:
-      - ${BASE_HOST_DOC_ROOT_DIR}:${BASE_REMOTE_DOC_ROOT_DIR}
-    environment:
-      - NODE_ENV=development
-    command:
-      ${BASE_JS_COMMAND_RUNNER} run dev
+    web:
+        volumes:
+            - ${BASE_HOST_DOC_ROOT_DIR}:${BASE_REMOTE_DOC_ROOT_DIR}
+        environment:
+            - NODE_ENV=development
+        command:
+            ${BASE_JS_COMMAND_RUNNER} run dev
 
-  cli:
-    volumes:
-      - ${BASE_HOST_DOC_ROOT_DIR}:${BASE_REMOTE_DOC_ROOT_DIR}
+    cli:
+        volumes:
+            - ${BASE_HOST_DOC_ROOT_DIR}:${BASE_REMOTE_DOC_ROOT_DIR}

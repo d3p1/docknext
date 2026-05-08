@@ -24,6 +24,6 @@
 # @link https://github.com/FiloSottile/mkcert/
 ##
 tls:
-  certificates:
-    - certFile: /etc/traefik/certs/next.crt
-      keyFile : /etc/traefik/certs/next.key
+    certificates:
+        -   certFile: /etc/traefik/certs/next.crt
+            keyFile: /etc/traefik/certs/next.key

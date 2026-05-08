@@ -30,35 +30,35 @@
 #              could be useful for rollbacks
 ##
 services:
-  traefik:
-    volumes:
-      - ./services/traefik/etc/acme.json:/etc/traefik/acme.json
-    environment:
-      - TRAEFIK_CERTIFICATESRESOLVERS_LE-HTTP_ACME_EMAIL=${BASE_USER_EMAIL}
-      - TRAEFIK_CERTIFICATESRESOLVERS_LE-HTTP_ACME_STORAGE=/etc/traefik/acme.json
-      - TRAEFIK_CERTIFICATESRESOLVERS_LE-HTTP_ACME_HTTPCHALLENGE_ENTRYPOINT=web
+    traefik:
+        volumes:
+            - ./services/traefik/etc/acme.json:/etc/traefik/acme.json
+        environment:
+            - TRAEFIK_CERTIFICATESRESOLVERS_LE-HTTP_ACME_EMAIL=${BASE_USER_EMAIL}
+            - TRAEFIK_CERTIFICATESRESOLVERS_LE-HTTP_ACME_STORAGE=/etc/traefik/acme.json
+            - TRAEFIK_CERTIFICATESRESOLVERS_LE-HTTP_ACME_HTTPCHALLENGE_ENTRYPOINT=web
 
-  web:
-    image: ${BASE_WEB_IMAGE_NAME}:latest
-    pull_policy: always
-    build:
-      context: ${BASE_HOST_DOC_ROOT_DIR}
-      args:
-        - BASE_NODE_VERSION=${BASE_NODE_VERSION}
-        - BASE_BUN_VERSION=${BASE_BUN_VERSION}
-        - BASE_REMOTE_DOC_ROOT_DIR=${BASE_REMOTE_DOC_ROOT_DIR}
-        - BASE_JS_COMMAND_RUNNER=${BASE_JS_COMMAND_RUNNER}
-        - BUILD_CMD=${BASE_BUILD_CMD}
-    volumes:
-      - docroot:${BASE_REMOTE_DOC_ROOT_DIR}
-    environment:
-      - NODE_ENV=production
-    labels:
-      - traefik.http.routers.https-next.tls.certresolver=le-http
+    web:
+        image: ${BASE_WEB_IMAGE_NAME}:latest
+        pull_policy: always
+        build:
+            context: ${BASE_HOST_DOC_ROOT_DIR}
+            args:
+                - BASE_NODE_VERSION=${BASE_NODE_VERSION}
+                - BASE_BUN_VERSION=${BASE_BUN_VERSION}
+                - BASE_REMOTE_DOC_ROOT_DIR=${BASE_REMOTE_DOC_ROOT_DIR}
+                - BASE_JS_COMMAND_RUNNER=${BASE_JS_COMMAND_RUNNER}
+                - BUILD_CMD=${BASE_BUILD_CMD}
+        volumes:
+            - docroot:${BASE_REMOTE_DOC_ROOT_DIR}
+        environment:
+            - NODE_ENV=production
+        labels:
+            - traefik.http.routers.https-next.tls.certresolver=le-http
 
-  cli:
-    volumes:
-      - docroot:${BASE_REMOTE_DOC_ROOT_DIR}
+    cli:
+        volumes:
+            - docroot:${BASE_REMOTE_DOC_ROOT_DIR}
 
 volumes:
-  docroot:
+    docroot:

@@ -15,55 +15,55 @@
 #              and/or improve how versions are handled
 ##
 services:
-  traefik:
-    image:
-      traefik:v${BASE_TRAEFIK_VERSION}
-    ports:
-      - 80:80
-      - 443:443
-    depends_on:
-      - web
-    volumes:
-      - ${BASE_DOCKER_PATH}:/var/run/docker.sock
-    environment:
-      - TRAEFIK_ENTRYPOINTS_WEB_ADDRESS=:80
-      - TRAEFIK_ENTRYPOINTS_WEBSECURE_ADDRESS=:443
-      - TRAEFIK_ENTRYPOINTS_WEB_HTTP_REDIRECTIONS_ENTRYPOINT_TO=websecure
-      - TRAEFIK_ENTRYPOINTS_WEB_HTTP_REDIRECTIONS_ENTRYPOINT_SCHEME=https
-      - TRAEFIK_ENTRYPOINTS_WEB_HTTP_REDIRECTIONS_ENTRYPOINT_PERMANENT=true
-      - TRAEFIK_PING=true
-      - TRAEFIK_PROVIDERS_DOCKER=true
-    restart:
-      always
+    traefik:
+        image:
+            traefik:v${BASE_TRAEFIK_VERSION}
+        ports:
+            - 80:80
+            - 443:443
+        depends_on:
+            - web
+        volumes:
+            - ${BASE_DOCKER_PATH}:/var/run/docker.sock
+        environment:
+            - TRAEFIK_ENTRYPOINTS_WEB_ADDRESS=:80
+            - TRAEFIK_ENTRYPOINTS_WEBSECURE_ADDRESS=:443
+            - TRAEFIK_ENTRYPOINTS_WEB_HTTP_REDIRECTIONS_ENTRYPOINT_TO=websecure
+            - TRAEFIK_ENTRYPOINTS_WEB_HTTP_REDIRECTIONS_ENTRYPOINT_SCHEME=https
+            - TRAEFIK_ENTRYPOINTS_WEB_HTTP_REDIRECTIONS_ENTRYPOINT_PERMANENT=true
+            - TRAEFIK_PING=true
+            - TRAEFIK_PROVIDERS_DOCKER=true
+        restart:
+            always
 
-  web:
-    image:
-      d3p1/jsruntime:n${BASE_NODE_VERSION}-b${BASE_BUN_VERSION}
-    expose:
-      - 3000
-    env_file:
-      - services/runtime/.env
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.https-next.entrypoints=websecure
-      - traefik.http.routers.https-next.tls=true
-      - traefik.http.routers.https-next.rule=Host(`${BASE_DOMAIN}`) || Host(`www.${BASE_DOMAIN}`)
-      - traefik.http.routers.https-next.service=https-next
-      - traefik.http.services.https-next.loadbalancer.server.port=3000
-      - traefik.http.routers.http-next.entrypoints=web
-      - traefik.http.routers.http-next.tls=false
-      - traefik.http.routers.http-next.rule=Host(`${BASE_DOMAIN}`) || Host(`www.${BASE_DOMAIN}`)
-      - traefik.http.routers.http-next.service=http-next
-      - traefik.http.services.http-next.loadbalancer.server.port=3000
-    restart:
-      always
+    web:
+        image:
+            d3p1/jsruntime:n${BASE_NODE_VERSION}-b${BASE_BUN_VERSION}
+        expose:
+            - 3000
+        env_file:
+            - services/runtime/.env
+        labels:
+            - traefik.enable=true
+            - traefik.http.routers.https-next.entrypoints=websecure
+            - traefik.http.routers.https-next.tls=true
+            - traefik.http.routers.https-next.rule=Host(`${BASE_DOMAIN}`) || Host(`www.${BASE_DOMAIN}`)
+            - traefik.http.routers.https-next.service=https-next
+            - traefik.http.services.https-next.loadbalancer.server.port=3000
+            - traefik.http.routers.http-next.entrypoints=web
+            - traefik.http.routers.http-next.tls=false
+            - traefik.http.routers.http-next.rule=Host(`${BASE_DOMAIN}`) || Host(`www.${BASE_DOMAIN}`)
+            - traefik.http.routers.http-next.service=http-next
+            - traefik.http.services.http-next.loadbalancer.server.port=3000
+        restart:
+            always
 
-  cli:
-    image:
-      d3p1/jsruntime:n${BASE_NODE_VERSION}-b${BASE_BUN_VERSION}-dev
-    env_file:
-      - services/runtime/.env
-    labels:
-      - traefik.enable=false
-    profiles:
-      - cli
+    cli:
+        image:
+            d3p1/jsruntime:n${BASE_NODE_VERSION}-b${BASE_BUN_VERSION}-dev
+        env_file:
+            - services/runtime/.env
+        labels:
+            - traefik.enable=false
+        profiles:
+            - cli
